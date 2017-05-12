@@ -35,7 +35,7 @@
 		<li><a href="#!"><i class="material-icons">shop</i> Produtos</a></li>
 		<li><a href="#!"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
 		<li><a href="#!"><i class="material-icons">trending_down</i>Relatórios</a></li>
-		<li><a href="#!"><i class="material-icons">question_answer</i>Atendimento</a></li>
+		<li><a href="#modalatendimento"><i class="material-icons">question_answer</i>Atendimento</a></li>
 
   </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -43,6 +43,30 @@
     <div class="row">
 		<div class="col s3"></div>
 		<div class="col s8" id = "conta">Informações da conta</div>
+	</div>
+
+	  <div id="modalatendimento" class="modal">
+		<div class="modal-content">
+			<h4>Mande uma mensagem para o administrador</h4>
+		</div>
+		<form action='register' method='post'>
+		<div class="container">
+		<div class="row">
+			<div class="input-field col s6">
+			  <input class="validate" type="email" name="razaoSocial" id="razaoSocial" />
+			  <label for="razaoSocial">Digite seu email</label>
+			</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="msg" class="materialize-textarea"></textarea>
+				<label for="msg">Mensagem</label>
+			</div>
+		</div>
+		</form>
+		</form>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Enviar</a>
+		</div>
 	</div>
 
   <!--Import jQuery before materialize.js-->
