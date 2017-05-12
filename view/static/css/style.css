@@ -1,3 +1,46 @@
 .parallax-container {
   height: "700px";
 }
+
+.brand-logo {
+  color: #000 !important;
+}
+
+.itens-menu {
+  color: #544771 !important;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#segundo-parallax {
+  background: #544771;
+  height: 200px;
+}
+
+#texto-segundo-parallax {
+  color: #fff;
+  font-size: 32px;
+}
+
+#terceiro-parallax .card-about {
+  background: #CCC;
+  color: #000;
+} 
+
+#terceiro-parallax .card-about h2 {
+  font-size: 32px;  
+}
+
+#terceiro-parallax .card-about p {
+  font-size: 24px;
+}
+
+.page-footer {
+  background: #544771 !important;
+}
+
+.page-footer h5, .page-footer p {
+  color: white;
+}

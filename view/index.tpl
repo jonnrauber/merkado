@@ -15,51 +15,86 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper black">
-      <a href="#!" class="brand-logo center"><span class="green-text darken-4">Merkado</span></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn green darken-4">Login <i class="material-icons right">vpn_key</i></a></li>
-        <li><a class="waves-effect waves-light btn green darken-4">Cadastro <i class="material-icons right">mode_edit</i></a></li>
-      </ul>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">MerKado</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#modalLogin" class="itens-menu waves-effect waves-light">Login</a></li>
+          <li><a href="#modalRegister" class="itens-menu waves-effect waves-light">Cadastre-se</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+  <!-- Modal de Login -->
+  <div id="modalLogin" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Acessar Conta</h4>
+      <form action='login' method='post'>
+		
+      </form>
     </div>
-  </nav>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+  
+  <!-- Modal de Cadastro -->
+  <div id="modalRegister" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Requisição de Cadastro</h4>
+      <form action='register' method='post'>
+		
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
 
   <div class="parallax-container">
     <div class="parallax"><img src="static/img/parallax.jpg"></div>
-    <h1>Merkado</h1>
   </div>
-  <div class="parallax-container">
-    <h1>Merkado</h1>
+  <div id="segundo-parallax" class="valign-wrapper parallax-container">
+	<div class="container center">
+      <p id="texto-segundo-parallax">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+	</div>
   </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="static/img/parallax.jpg"></div>
-    <h1>Merkado</h1>
+  <div id="terceiro-parallax" class="parallax-container">
+    <div class="parallax"><img src=""></div>
+    <div class="container center">
+	  <div class="row">
+	    <div class="card-about col s6 m6">
+	      <h2>About</h2>
+	      <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+	    </div>
+	  </div>
+    </div>
   </div>
 
 
 
-  <footer class="page-footer teal">
+  <footer class="page-footer">
      <div class="container">
        <div class="row">
          <div class="col l6 s12">
-           <h5 class="white-text">Merkado ©</h5>
-           <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+           <h5>Merkado</h5>
+           <p>contato@merkado.com.br</p>
+           <p>(49) 3647 3333</p>
          </div>
          <div class="col l4 offset-l2 s12">
-           <h5 class="white-text">Links</h5>
+           <h5>Redes Sociais</h5>
            <ul>
-             <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-             <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-             <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-             <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
            </ul>
          </div>
        </div>
      </div>
      <div class="footer-copyright">
        <div class="container">
-       © 2014 Copyright Text
+       © 2017 MerKado - Todos os direitos reservados
        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
        </div>
      </div>
@@ -67,8 +102,8 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="/static/js/materialize.min.js"></script>
-  <script type="text/javascript" src="/static/js/script.js"></script>
+  <script type="text/javascript" src="static/js/materialize.min.js"></script>
+  <script type="text/javascript" src="static/js/script.js"></script>
 </body>
 
 </html>
