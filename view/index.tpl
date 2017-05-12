@@ -16,7 +16,7 @@
 
 <body>
   <div class="navbar-fixed">
-    <nav>
+    <nav id="menu">
       <div class="nav-wrapper container">
         <a href="#!" class="brand-logo">MerKado</a>
         <ul class="right hide-on-med-and-down">
@@ -28,15 +28,37 @@
   </div>
   
   <!-- Modal de Login -->
-  <div id="modalLogin" class="modal modal-fixed-footer">
+  <div id="modalLogin" class="modal">
     <div class="modal-content">
       <h4>Acessar Conta</h4>
       <form action='login' method='post'>
-		
+		<div class="container">
+		  <p>
+			<div class="input-field col s12">
+			  <input class="validate" type="text" name="cnpj" id="cnpj" />
+			  <label for="cnpj">CNPJ</label>
+			</div>
+		  </p>
+		  <p>
+			<div class="input-field col s12">
+			  <input class="validate" type="password" name="senha" id="senha" />
+			  <label for="cnpj">Senha</label>
+			</div>
+		  </p>
+		  <div class="row">
+			<div class="col s6">
+			  <input type="checkbox" class="filled-in" id="lembrar" name="lembrar" /> 
+			  <label for="lembrar">Continuar conectado</label>
+			</div>
+			<div class="col s6">
+			  <button type="submit" class="right btn waves-effect waves-light">Entre</button>
+			</div>
+		  </div>
+		  <p>
+			<a href="forgot-pass">Esqueceu a senha?</a>
+		  </p>
+		</div>
       </form>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
     </div>
   </div>
   
@@ -53,7 +75,7 @@
     </div>
   </div>
 
-  <div class="parallax-container">
+  <div id="primeiro-parallax" class="parallax-container">
     <div class="parallax"><img src="static/img/parallax.jpg"></div>
   </div>
   <div id="segundo-parallax" class="valign-wrapper parallax-container">
