@@ -54,3 +54,25 @@ nav {
 .page-footer h5, .page-footer p {
   color: white;
 }
+
+.side-nav{
+ background: #e0e0e0;
+}
+
+.userView{
+	background: #e0e0e0;
+}
+
+#conta{
+	background:#e0e0e0;
+	text-align:center;
+}
+
+#cab{
+	color: black;
+}
+
+#logomerkado{
+	font-size: xx-large;
+	font-family: "verdana";
+}
