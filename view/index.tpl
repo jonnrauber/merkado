@@ -51,7 +51,7 @@
 			  <label for="lembrar">Continuar conectado</label>
 			</div>
 			<div class="col s6">
-			 <button type="submit" class="right btn waves-effect waves-light">Entre</button>
+			  <button type="submit" class="right btn waves-effect waves-light">Entre</button>
 			</div>
 		  </div>
 		  <p>
