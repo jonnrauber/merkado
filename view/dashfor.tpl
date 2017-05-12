@@ -5,8 +5,6 @@
   <title>Dashboard</title>
   <meta charset=”UTF-8”>
 
-  <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
   <!--Let browser know website is optimized for mobile-->
@@ -49,7 +47,7 @@
 	</div>
 
   <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="static/js/materialize.min.js"></script>
   <script type="text/javascript" src="static/js/script.js"></script>
 </body>

@@ -4,8 +4,6 @@
 <head>
   <title>Merkado</title>
 
-  <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
   <!--Let browser know website is optimized for mobile-->
@@ -26,7 +24,7 @@
       </div>
     </nav>
   </div>
-  
+
   <!-- Modal de Login -->
   <div id="modalLogin" class="modal">
     <div class="modal-content">
@@ -47,7 +45,7 @@
 		  </p>
 		  <div class="row">
 			<div class="col s6">
-			  <input type="checkbox" class="filled-in" id="lembrar" name="lembrar" /> 
+			  <input type="checkbox" class="filled-in" id="lembrar" name="lembrar" />
 			  <label for="lembrar">Continuar conectado</label>
 			</div>
 			<div class="col s6">
@@ -61,7 +59,7 @@
       </form>
     </div>
   </div>
-  
+
   <!-- Modal de Cadastro -->
   <div id="modalRegister" class="modal">
     <div class="modal-content">
@@ -114,7 +112,7 @@
   </div>
 
   <div id="primeiro-parallax" class="parallax-container">
-    <div class="parallax"><img src="static/img/parallax.jpg"></div>
+    <div class="parallax"><img src=""></div>
   </div>
   <div id="segundo-parallax" class="valign-wrapper parallax-container">
 	<div class="container center">
@@ -161,7 +159,7 @@
    </footer>
 
   <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="static/js/materialize.min.js"></script>
   <script type="text/javascript" src="static/js/script.js"></script>
 </body>
