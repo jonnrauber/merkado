@@ -2,6 +2,7 @@ $(document).ready(function(){
    $('.parallax').parallax();
    $('#modalLogin').modal();
    $('#modalRegister').modal();
+   $('.modal').modal();
  });
 
 (function () {
