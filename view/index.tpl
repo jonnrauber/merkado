@@ -63,15 +63,53 @@
   </div>
   
   <!-- Modal de Cadastro -->
-  <div id="modalRegister" class="modal modal-fixed-footer">
+  <div id="modalRegister" class="modal">
     <div class="modal-content">
       <h4>Requisição de Cadastro</h4>
       <form action='register' method='post'>
-		
+	  <div class="row">
+		<div class="col s7">
+		  <div class="row">
+			<div class="input-field col s12">
+			  <input class="validate" type="text" name="razaoSocial" id="razaoSocial" />
+			  <label for="razaoSocial">Razão Social</label>
+			</div>
+			<div class="input-field col s12">
+			  <input class="validate" type="text" name="cnpj" id="cnpj" />
+			  <label for="cnpj">CNPJ</label>
+			</div>
+			<div class="input-field col s12">
+			  <input class="validate" type="text" name="fone" id="fone" />
+			  <label for="fone">Telefone</label>
+			</div>
+			<div class="input-field col s12">
+			  <input class="validate" type="email" name="email" id="email" />
+			  <label for="email">E-mail</label>
+			</div>
+		  </div>
+		</div>
+		<div class="col s5">
+		  <p>
+			<input name="tipo" type="radio" id="fornecedor" />
+			<label for="fornecedor">Fornecedor</label>
+		  </p>
+		  <p>
+			<input name="tipo" type="radio" id="mercado" />
+			<label for="mercado">Mercado</label>
+		  </p>
+		</div>
+	  </div>
+	  <div class="row">
+        <div class="input-field col s12">
+          <textarea id="msg" class="materialize-textarea"></textarea>
+          <label for="msg">Mensagem</label>
+        </div>
+      </div>
+      <div class="row">
+        <a href="help" class="left">Ajuda</a>
+        <button type="submit" class="right btn waves-effect waves-light">Enviar</button>
+      </div>
       </form>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
     </div>
   </div>
 
