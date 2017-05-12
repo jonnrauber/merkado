@@ -3,7 +3,6 @@
 
 <head>
   <title>Dashboard</title>
-  <meta charset=”UTF-8”>
 
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
@@ -20,7 +19,7 @@
 		<div class="col s5" id = "logomerkado">MerKado</a></div>
 		<div class="col s3">
 				<a class="black-text text-lighten-4 right" id ="cab" href="#!">Sair&nbsp &nbsp</a>
-				<a class="black-text text-lighten-4 right" id ="cab" href="#!">Notificaoes&nbsp &nbsp</a>
+				<a class="black-text text-lighten-4 right" id ="cab" href="#!">Notificações&nbsp &nbsp</a>
 				<a class="black-text text-lighten-4 right" id ="cab" href="#!">Mensagens&nbsp &nbsp</a>
 		</div>
 	</div>
@@ -32,18 +31,18 @@
 			<a href="#!user"><img class="circle" src="static/img/usu.jpg"></a>
 			<a href="#!name"><span class="black-text name">Fornecedor</span></a>
 		</div></li>
-		<li><a href="dashfor.tpl"><i class="material-icons">perm_identity</i>Inicio</a></li>
+		<li><a href="dashfor.tpl"><i class="material-icons">perm_identity</i>Início</a></li>
 		<li><a href="#!"><i class="material-icons">shop</i> Produtos</a></li>
-		<li><a href="#!"><i class="material-icons">mode_edit</i>Atualizacao cadastral</a></li>
-		<li><a href="#!"><i class="material-icons">trending_down</i>Relatrios</a></li>
+		<li><a href="#!"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
+		<li><a href="#!"><i class="material-icons">trending_down</i>Relatórios</a></li>
 		<li><a href="#!"><i class="material-icons">question_answer</i>Atendimento</a></li>
 
-    </ul>
+  </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
     <div class="row">
 		<div class="col s3"></div>
-		<div class="col s8" id = "conta">Informacoes da conta</div>
+		<div class="col s8" id = "conta">Informações da conta</div>
 	</div>
 
   <!--Import jQuery before materialize.js-->
