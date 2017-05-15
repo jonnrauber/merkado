@@ -10,19 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <link type="text/css" href="static/css/style.css" rel="stylesheet">
-
+  <link type="text/css" href="static/css/styledashboard.css" rel="stylesheet">
 </head>
 
 <body>
-	<div class="row">
-		<div class="col s3"></div>
-		<div class="col s5" id = "logomerkado">MerKado</a></div>
-		<div class="col s3">
-				<a class="black-text text-lighten-4 right" id ="cab" href="#!">Sair&nbsp &nbsp</a>
-				<a class="black-text text-lighten-4 right" id ="cab" href="#!">Notificações&nbsp &nbsp</a>
-				<a class="black-text text-lighten-4 right" id ="cab" href="#!">Mensagens&nbsp &nbsp</a>
-		</div>
-	</div>
+		
 
 	<ul id="slide-out" class="side-nav fixed">
 		<li><div class="userView">
@@ -36,15 +28,15 @@
 		<li><a href="#!"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
 		<li><a href="#!"><i class="material-icons">trending_down</i>Relatórios</a></li>
 		<li><a href="#modalatendimento"><i class="material-icons">question_answer</i>Atendimento</a></li>
-
-  </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-
-    <div class="row">
-		<div class="col s3"></div>
-		<div class="col s8" id = "conta">Informações da conta</div>
-	</div>
-
+	</ul> 
+	<a href="#" data-activates="slide-out" class="button-collapse left hide-on-large-only"><i class="material-icons">menu</i></a> 
+	
+	<a class="left" id="logomerkado">MerKado</a>
+	<a href="/" >Sair</a>
+	<a href="#!">Notificações</a>
+	<a href="#!">Mensagens</a>
+	
+	
 	  <div id="modalatendimento" class="modal">
 		<div class="modal-content">
 			<h4>Mande uma mensagem para o administrador</h4>
