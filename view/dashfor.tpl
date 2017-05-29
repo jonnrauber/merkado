@@ -14,7 +14,7 @@
 </head>
 
 <body>
-		
+
 
 	<ul id="slide-out" class="side-nav fixed">
 		<li><div class="userView">
@@ -23,20 +23,20 @@
 			<a href="#!user"><img class="circle" src="static/img/usu.jpg"></a>
 			<a href="#!name"><span class="black-text name">Fornecedor</span></a>
 		</div></li>
-		<li><a href="dashfor.tpl"><i class="material-icons">perm_identity</i>Início</a></li>
+		<li><a href="dashboardFornecedor"><i class="material-icons">perm_identity</i>Início</a></li>
 		<li><a href="#!"><i class="material-icons">shop</i> Produtos</a></li>
 		<li><a href="#!"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
 		<li><a href="#!"><i class="material-icons">trending_down</i>Relatórios</a></li>
 		<li><a href="#modalatendimento"><i class="material-icons">question_answer</i>Atendimento</a></li>
-	</ul> 
-	<a href="#" data-activates="slide-out" class="button-collapse left hide-on-large-only"><i class="material-icons">menu</i></a> 
-	
+	</ul>
+	<a href="#" data-activates="slide-out" class="button-collapse left hide-on-large-only"><i class="material-icons">menu</i></a>
+
 	<a class="left" id="logomerkado">MerKado</a>
 	<a href="/" >Sair</a>
 	<a href="#!">Notificações</a>
 	<a href="#!">Mensagens</a>
-	
-	
+
+
 	  <div id="modalatendimento" class="modal">
 		<div class="modal-content">
 			<h4>Mande uma mensagem para o administrador</h4>

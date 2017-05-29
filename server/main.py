@@ -9,6 +9,10 @@ def server_static(path):
 def start():
     pass
 
+@post('/register')
+def register():
+    pass
+
 @route('/dashboardFornecedor')
 @view('dashfor')
 def posLogin():

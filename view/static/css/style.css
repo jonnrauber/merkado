@@ -44,7 +44,7 @@
 }
 
 .itens-menu {
-  color: #544771 !important;
+  color: #4E516E !important;
 }
 
 nav {
@@ -62,7 +62,7 @@ nav {
 }
 
 #segundo-parallax {
-  background: #544771;
+  background: #4E516E;
   height: 200px;
 }
 
@@ -85,9 +85,17 @@ nav {
 }
 
 .page-footer {
-  background: #544771 !important;
+  background: #4E516E !important;
 }
 
 .page-footer h5, .page-footer p {
   color: white;
+}
+
+#img-carrinho {
+  height: 620px;
+}
+
+#img-mulher {
+  width: 600px;
 }
