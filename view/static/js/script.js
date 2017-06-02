@@ -3,6 +3,7 @@ $(document).ready(function(){
    $('#modalLogin').modal();
    $('#modalRegister').modal();
    $('.modal').modal();
+   $('.collapsible').collapsible();
  });
 
 (function () {
