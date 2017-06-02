@@ -61,7 +61,7 @@
   </div>
 
   <!-- Modal de Cadastro -->
-  <div id="modalRegister" class="modal">
+  <div id="modalRegister" class="modal modal-fixed-footer">
     <div class="modal-content">
       <h4>Requisição de Cadastro</h4>
       <form action='register' method='post'>
@@ -103,12 +103,12 @@
           <label for="msg">Mensagem</label>
         </div>
       </div>
-      <div class="row">
-        <a href="help" class="left">Ajuda</a>
-        <button type="submit" class="right btn waves-effect waves-light">Enviar</button>
-      </div>
-      </form>
     </div>
+    <div class='modal-footer'>
+      <a href="help" class="left valign-wrapper">Ajuda</a>
+      <button type="submit" class="right valign-wrapper btn waves-effect waves-light">Enviar</button>
+    </div>
+    </form>
   </div>
 
   <div id="primeiro-parallax" class="parallax-container">

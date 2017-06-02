@@ -54,11 +54,11 @@ nav {
 }
 
 .paginaRolada {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 1);
 }
 
 #primeiro-parallax {
-  top: 0px;
+  padding: -200px;
 }
 
 #segundo-parallax {
