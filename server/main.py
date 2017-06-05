@@ -91,12 +91,11 @@ def login():
         print("CNPJ/Senha inválido(s)!")
         redirect("/")
 
-    sql = "select * from cliente c where c.cnpj = '{}' and c.senha = '{}'"
-    sql.format(cnpj, senha)
+    sql = "select * from cliente c where c.cnpj = '{}' and c.senha = '{}'".format(cnpj, senha)
     c.execute(sql)
     tupla = c.fetchall()
     #verificação de login do usuario no banco de dados
-    if(tupla != None):
+    if(tupla):
         redirect('/dashboardFornecedor')
     else:
         redirect('/')
