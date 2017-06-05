@@ -12,7 +12,36 @@ def start():
 
 @post('/register')
 def register():
-    pass
+    flag = 0
+    razaoSocial = str(request.forms.get('razaoSocial'))
+    if (razaoSocial == None or len(razaoSocial) == 0):
+        print("Erro! Razão Social campo obrigatório.")
+        flag = 1
+    cnpj = str(request.forms.get('cnpj'))
+    if (cnpj == None or len(cnpj) == 0):
+        print("Erro! CNPJ campo obrigatório.")
+        flag = 1
+    telefone = str(request.forms.get('fone'))
+    if (telefone == None or len(telefone) == 0):
+        print("Erro! Telefone campo obrigatório.")
+        flag = 1
+    email = str(request.forms.get('email'))
+    if (email == None or len(email) == 0):
+        print("Erro! E-mail campo obrigatório.")
+        flag = 1
+    tipo = str(request.forms.get('tipo'))
+    mensagem = str(request.forms.get('msg'))
+    if (mensagem == None or len(mensagem) == 0):
+        print("Erro! Mensagem campo obrigatório.")
+        flag = 1
+    if (flag == 1):
+        redirect("/")
+
+    sql = "INSERT INTO req_cadastro VALUES ('{}', '{}', '{}', '{}', '{}', '{}')"
+    sql.format(razaoSocial, cnpj, telefone, email, tipo, mensagem)
+    c.execute(sql)
+    conn.commit()
+    print("Requisição enviada com sucesso!")
 
 @route('/dashboardFornecedor')
 @view('dashfor')

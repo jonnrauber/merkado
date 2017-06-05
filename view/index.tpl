@@ -69,26 +69,26 @@
   		<div class="col s7">
   		  <div class="row">
   			<div class="input-field col s12">
-  			  <input class="validate" type="text" name="razaoSocial" id="razaoSocial" />
+  			  <input class="validate" type="text" name="razaoSocial" id="razaoSocial" maxlength="80" required/>
   			  <label for="razaoSocial">Razão Social</label>
   			</div>
   			<div class="input-field col s12">
-  			  <input class="validate" type="text" name="cnpj" id="cnpj" />
+  			  <input class="validate" type="text" name="cnpj" id="cnpj" data-mask="00.000.000/0000.00" data-mask-selectonfocus="true" maxlength="14" required/>
   			  <label for="cnpj">CNPJ</label>
   			</div>
   			<div class="input-field col s12">
-  			  <input class="validate" type="text" name="fone" id="fone" />
+  			  <input class="validate" type="text" name="fone" id="fone" data-mask="(00) 0000-0000" data-mask-selectonfocus="true" required/>
   			  <label for="fone">Telefone</label>
   			</div>
   			<div class="input-field col s12">
-  			  <input class="validate" type="email" name="email" id="email" />
+  			  <input class="validate" type="email" name="email" id="email" maxlength="50" required/>
   			  <label for="email">E-mail</label>
   			</div>
   		  </div>
   		</div>
   		<div class="col s5">
   		  <p>
-  			<input name="tipo" type="radio" id="fornecedor" />
+  			<input name="tipo" type="radio" id="fornecedor" checked />
   			<label for="fornecedor">Fornecedor</label>
   		  </p>
   		  <p>
@@ -99,7 +99,7 @@
   	  </div>
   	  <div class="row">
         <div class="input-field col s12">
-          <textarea id="msg" class="materialize-textarea"></textarea>
+          <textarea id="msg" class="materialize-textarea" required></textarea>
           <label for="msg">Mensagem</label>
         </div>
       </div>
@@ -163,6 +163,7 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="static/js/jquery.maskedinput.js"></script>
   <script type="text/javascript" src="static/js/materialize.min.js"></script>
   <script type="text/javascript" src="static/js/script.js"></script>
 </body>

@@ -8,6 +8,16 @@ CREATE TABLE usuario(
 	email varchar(30)
 );
 
+CREATE TABLE req_cadastro(
+	req_cadastro_id SERIAL NOT NULL primary key,
+	razao_social varchar(80) NOT NULL,
+	cnpj varchar(14) NOT NULL,
+	telefone varchar(15) NOT NULL,
+	email varchar(50) NOT NULL,
+	tipo varchar(10) NOT NULL,
+	mensagem varchar(255) NOT NULL
+);
+
 CREATE TABLE cliente(
 	cnpj integer NOT NULL primary key,
 	ie integer,
@@ -31,7 +41,7 @@ CREATE TABLE produto(
 	nome varchar(30) NOT NULL,
 	fornecedor integer NOT NULL,
 	constraint fk_produto_cliente foreign key(fornecedor) references cliente(cnpj)
-	
+
 );
 
 CREATE TABLE precos(
