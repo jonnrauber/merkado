@@ -1,6 +1,8 @@
-from bottle import route, run, template, static_file, view, post, get, redirect
-from bottle import route, run, template, static_file, view, post, redirect, request
+from bottle import route, run, template, static_file, view, post, get, redirect, request
 from connect import *
+import requests
+
+s = requests.Session()
 
 @route('/static/<path:path>')
 def server_static(path):
@@ -52,11 +54,28 @@ def posLogin():
 @get("/produtosFornecedor")
 @view('produtosfor')
 def produtos():
+    #listaProdutos = getProdutosByFornecedor()
+    #return dict(produtos=listaProdutos)
     pass
+
+def getProdutosByFornecedor(fornecedor):
+    sql = "SELECT * FROM produto WHERE fornecedor = '{}'".format(fornecedor)
+    c.execute(sql)
+    produtos = c.fetchall()
+    return produtos
 
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
-def produtos():
+def atualizacaoFornecedor():
+    #sql = "SELECT * FROM cliente WHERE cnpj = '{}'".format()
+    #c.execute(sql)
+    #tupla = c.fetchall()
+    #return dict(cadastro = tupla)
+    pass
+
+@post("/atualizacaoFornecedor")
+@view('atualizafor')
+def atualizacaoFornecedor():
     pass
 
 @route('/config')
