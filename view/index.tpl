@@ -33,13 +33,13 @@
 		<div class="container">
 		  <p>
 			<div class="input-field col s12">
-			  <input class="validate" type="text" name="cnpj" id="cnpj" />
+			  <input class="validate" type="text" name="cnpj" id="cnpj" required />
 			  <label for="cnpj">CNPJ</label>
 			</div>
 		  </p>
 		  <p>
 			<div class="input-field col s12">
-			  <input class="validate" type="password" name="senha" id="senha" />
+			  <input class="validate" type="password" name="senha" id="senha" required />
 			  <label for="cnpj">Senha</label>
 			</div>
 		  </p>
@@ -99,7 +99,7 @@
   	  </div>
   	  <div class="row">
         <div class="input-field col s12">
-          <textarea id="msg" class="materialize-textarea" required></textarea>
+          <textarea id="msg" class="validate materialize-textarea" required></textarea>
           <label for="msg">Mensagem</label>
         </div>
       </div>
@@ -156,7 +156,7 @@
      <div class="footer-copyright">
        <div class="container">
        © 2017 MerKado - Todos os direitos reservados
-       <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+       <a class="grey-text text-lighten-4 right" href="restrito">Área restrita</a>
        </div>
      </div>
    </footer>

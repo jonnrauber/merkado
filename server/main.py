@@ -40,11 +40,13 @@ def register():
     if (flag == 1):
         redirect("/")
 
-    sql = "INSERT INTO req_cadastro VALUES ('{}', '{}', '{}', '{}', '{}', '{}')"
-    sql.format(razaoSocial, cnpj, telefone, email, tipo, mensagem)
+    sql = "INSERT INTO req_cadastro (razao_social, cnpj, telefone, email, tipo, mensagem) \
+            VALUES ('{}', '{}', '{}', '{}', '{}', '{}')".format(
+            razaoSocial, cnpj, telefone, email, tipo, mensagem)
     c.execute(sql)
     conn.commit()
     print("Requisição enviada com sucesso!")
+    redirect("/")
 
 @route('/dashboardFornecedor')
 @view('dashfor')
@@ -87,9 +89,6 @@ def config():
 def login():
     cnpj = str(request.forms.get('cnpj'))
     senha = str(request.forms.get('senha'))
-    if (len(cnpj)==0 or cnpj==None or len(senha)==0 or senha==None):
-        print("CNPJ/Senha inválido(s)!")
-        redirect("/")
 
     sql = "select * from cliente c where c.cnpj = '{}' and c.senha = '{}'".format(cnpj, senha)
     c.execute(sql)
@@ -99,5 +98,13 @@ def login():
         redirect('/dashboardFornecedor')
     else:
         redirect('/')
+
+@get('/restrito')
+@view('restrito/controle')
+def restrito():
+    sql = "SELECT * FROM req_cadastro"
+    c.execute(sql)
+    requisicoes = c.fetchall()
+    return dict(requisicoes=requisicoes)
 
 run(host='localhost', port=8080)

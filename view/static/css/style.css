@@ -96,7 +96,6 @@ nav {
   height: 620px;
 }
 
-<<<<<<< HEAD
 #cab{
 	color: black;
 }
@@ -106,44 +105,21 @@ nav {
 	font-family: "verdana";
 }
 
-#modalatendimento h4{
-	font-size: 24px;
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url("../fonts/material-icons/MaterialIcons-Regular.woff2") format('woff2'),
-       url("../fonts/material-icons/MaterialIcons-Regular.woff") format('woff'),
-       url("../fonts/material-icons/MaterialIcons-Regular.ttf") format('truetype');
+@media screen and (max-width: 499px) {
+  #modalLogin{ width: 50% !important; }
 }
 
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  #modalLogin{ width: 40% !important; }
+}
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+@media screen and (min-width: 1440px) {
+  #modalLogin{ width: 40% !important; }
+}
 
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-} 
+#modalatendimento h4{
+	font-size: 24px;
+}
 
 #img-mulher {
   width: 600px;
@@ -153,4 +129,3 @@ nav {
 #emaill{
 	padding: -30 px !important;
 }
-	
