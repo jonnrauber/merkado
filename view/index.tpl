@@ -65,39 +65,39 @@
     <div class="modal-content">
       <h4>Requisição de Cadastro</h4>
       <form action='register' method='post'>
-	  <div class="row">
-		<div class="col s7">
-		  <div class="row">
-			<div class="input-field col s12">
-			  <input class="validate" type="text" name="razaoSocial" id="razaoSocial" />
-			  <label for="razaoSocial">Razão Social</label>
-			</div>
-			<div class="input-field col s12">
-			  <input class="validate" type="text" name="cnpj" id="cnpj" />
-			  <label for="cnpj">CNPJ</label>
-			</div>
-			<div class="input-field col s12">
-			  <input class="validate" type="text" name="fone" id="fone" />
-			  <label for="fone">Telefone</label>
-			</div>
-			<div class="input-field col s12">
-			  <input class="validate" type="email" name="email" id="email" />
-			  <label for="email">E-mail</label>
-			</div>
-		  </div>
-		</div>
-		<div class="col s5">
-		  <p>
-			<input name="tipo" type="radio" id="fornecedor" />
-			<label for="fornecedor">Fornecedor</label>
-		  </p>
-		  <p>
-			<input name="tipo" type="radio" id="mercado" />
-			<label for="mercado">Mercado</label>
-		  </p>
-		</div>
-	  </div>
-	  <div class="row">
+  	  <div class="row">
+  		<div class="col s7">
+  		  <div class="row">
+  			<div class="input-field col s12">
+  			  <input class="validate" type="text" name="razaoSocial" id="razaoSocial" />
+  			  <label for="razaoSocial">Razão Social</label>
+  			</div>
+  			<div class="input-field col s12">
+  			  <input class="validate" type="text" name="cnpj" id="cnpj" />
+  			  <label for="cnpj">CNPJ</label>
+  			</div>
+  			<div class="input-field col s12">
+  			  <input class="validate" type="text" name="fone" id="fone" />
+  			  <label for="fone">Telefone</label>
+  			</div>
+  			<div class="input-field col s12">
+  			  <input class="validate" type="email" name="email" id="email" />
+  			  <label for="email">E-mail</label>
+  			</div>
+  		  </div>
+  		</div>
+  		<div class="col s5">
+  		  <p>
+  			<input name="tipo" type="radio" id="fornecedor" />
+  			<label for="fornecedor">Fornecedor</label>
+  		  </p>
+  		  <p>
+  			<input name="tipo" type="radio" id="mercado" />
+  			<label for="mercado">Mercado</label>
+  		  </p>
+  		</div>
+  	  </div>
+  	  <div class="row">
         <div class="input-field col s12">
           <textarea id="msg" class="materialize-textarea"></textarea>
           <label for="msg">Mensagem</label>
@@ -112,7 +112,7 @@
   </div>
 
   <div id="primeiro-parallax" class="parallax-container">
-    <div class="parallax"><img src=""></div>
+    <div class="parallax"><img id="img-carrinho" src="static/img/home.fw.png"></div>
   </div>
   <div id="segundo-parallax" class="valign-wrapper parallax-container">
 	<div class="container center">
@@ -127,6 +127,9 @@
 	      <h2>About</h2>
 	      <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
 	    </div>
+      <div class="col s6 m6">
+        <img id="img-mulher" src="static/img/home2.fw.png">
+      </div>
 	  </div>
     </div>
   </div>

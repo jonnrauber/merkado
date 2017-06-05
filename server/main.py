@@ -1,4 +1,4 @@
-from bottle import route, run, template, static_file, view, post, redirect
+from bottle import route, run, template, static_file, view, post, get, redirect
 
 @route('/static/<path:path>')
 def server_static(path):
@@ -9,9 +9,23 @@ def server_static(path):
 def start():
     pass
 
+@post('/register')
+def register():
+    pass
+
 @route('/dashboardFornecedor')
 @view('dashfor')
 def posLogin():
+    pass
+
+@get("/produtosFornecedor")
+@view('produtosfor')
+def produtos():
+    pass
+
+@get("/atualizacaoFornecedor")
+@view('atualizafor')
+def produtos():
     pass
 
 @route('/config')

@@ -1,0 +1,43 @@
+body {
+  padding-left: 275px;
+}
+
+nav {
+  padding-right: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  body {
+    padding-left: 0;
+  }
+  nav {
+    padding-right: 0;
+  }
+}
+
+.side-nav{
+ background: #e0e0e0;
+}
+
+.userView{
+	background: #e0e0e0;
+}
+
+.cab{
+	color: black !important;
+}
+
+#logout i {
+	color: red;
+}
+
+#logomerkado{
+	padding-left: 20px;
+	font-size: xx-large;
+	font-family: "verdana";
+}
+
+#modalatendimento h4{
+	font-size: 24px;
+
+

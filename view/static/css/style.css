@@ -1,3 +1,40 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url("../fonts/material-icons/MaterialIcons-Regular.woff2") format('woff2'),
+       url("../fonts/material-icons/MaterialIcons-Regular.woff") format('woff'),
+       url("../fonts/material-icons/MaterialIcons-Regular.ttf") format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
 .parallax-container {
   height: "700px";
 }
@@ -7,7 +44,7 @@
 }
 
 .itens-menu {
-  color: #544771 !important;
+  color: #4E516E !important;
 }
 
 nav {
@@ -25,7 +62,7 @@ nav {
 }
 
 #segundo-parallax {
-  background: #544771;
+  background: #4E516E;
   height: 200px;
 }
 
@@ -48,26 +85,18 @@ nav {
 }
 
 .page-footer {
-  background: #544771 !important;
+  background: #4E516E !important;
 }
 
 .page-footer h5, .page-footer p {
   color: white;
 }
 
-.side-nav{
- background: #e0e0e0;
+#img-carrinho {
+  height: 620px;
 }
 
-.userView{
-	background: #e0e0e0;
-}
-
-#conta{
-	background:#e0e0e0;
-	text-align:center;
-}
-
+<<<<<<< HEAD
 #cab{
 	color: black;
 }
@@ -114,4 +143,14 @@ nav {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+} 
+
+#img-mulher {
+  width: 600px;
+
 }
+
+#emaill{
+	padding: -30 px !important;
+}
+	
