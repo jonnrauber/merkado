@@ -68,15 +68,18 @@ def config():
 def login():
     cnpj = str(request.forms.get('cnpj'))
     senha = str(request.forms.get('senha'))
+    if (len(cnpj)==0 or cnpj==None or len(senha)==0 or senha==None):
+        print("CNPJ/Senha inválido(s)!")
+        redirect("/")
 
-    sql = "select * from cliente c where c.cnpj = '%s' and c.senha = '%s'" %\
-            (cnpj, senha)
+    sql = "select * from cliente c where c.cnpj = '{}' and c.senha = '{}'"
+    sql.format(cnpj, senha)
     c.execute(sql)
-    c.fetchOne()
+    tupla = c.fetchall()
     #verificação de login do usuario no banco de dados
-    if(c):
+    if(tupla):
         redirect('/dashboardFornecedor')
     else:
-        redirect('/home')
+        redirect('/')
 
 run(host='localhost', port=8080)
