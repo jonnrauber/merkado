@@ -62,3 +62,6 @@ CREATE TABLE favoritos_usuario(
 	constraint fk_favoritos_usuario_usuario foreign key(user_app) references usuario(user_app),
 	constraint fk_favoritos_usuario_produto foreign key(id_prod) references produto(idp)
 );
+
+INSERT INTO cliente (cnpj, razao_social, nome_fantasia, rua, numero, bairro, cidade, uf, cep, email, fone, senha, tipo)
+	VALUES ('administrador1', 'administrador', 'eu ate administro', 'rua dos adm', '1', 'administrado', 'cidade do adm', 'sc', '12345678', 'adm@adm.adm.ad', '1234567890', 'admin', 'fornecedor');

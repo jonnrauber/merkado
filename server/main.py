@@ -77,7 +77,7 @@ def login():
     c.execute(sql)
     tupla = c.fetchall()
     #verificação de login do usuario no banco de dados
-    if(tupla):
+    if(tupla != None):
         redirect('/dashboardFornecedor')
     else:
         redirect('/')
