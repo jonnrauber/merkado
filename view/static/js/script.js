@@ -2,8 +2,12 @@ $(document).ready(function(){
    $('.parallax').parallax();
    $('#modalLogin').modal();
    $('#modalRegister').modal();
-   $('.modal').modal();
+   $('#modalatendimento').modal();
    $('.collapsible').collapsible();
+   $('.fixed-action-btn').openFAB();
+   $('.fixed-action-btn').closeFAB();
+   $('.fixed-action-btn.toolbar').openToolbar();
+   $('.fixed-action-btn.toolbar').closeToolbar();
  });
 
 (function () {

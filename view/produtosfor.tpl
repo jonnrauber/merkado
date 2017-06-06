@@ -39,44 +39,57 @@
 	<a href="/" >Sair</a>
 
 -->
-
-	<div id="content">
-
-		<table class="table table-striped">
-			<thead>
-        <th>ID</th>
-			  <th>Nome</th>
-        <th>Marca</th>
-        <th>Categoria</th>
-      </thead>
-		</table>
-
+	<div class="row">
+		<div class="input-field col s12">
+			<h5>Meus Produtos</h5>
+		</div>
+	</div>
+	<div class = "container">
+		<div id="content">
+	
+			<table class="table table-striped">
+				<thead>
+					<th>ID</th>
+					<th>Nome</th>
+					<th>Marca</th>
+					<th>Categoria</th>
+				</thead>
+			</table>
+		</div>
+	</div>
+	
+	<div class="fixed-action-btn">
+		<a class="btn-floating btn-large red" href="#modalatendimento">
+			<i class="large material-icons">add</i>
+		</a>
 	</div>
 
 	  <div id="modalatendimento" class="modal">
 		<div class="modal-content">
-			<h4>Mande uma mensagem para o administrador</h4>
-		</div>
+		<h4>Mande uma mensagem para o administrador</h4>
 		<form action='register' method='post'>
 		<div class="container">
 		<div class="row">
-			<div class="input-field col s6" id = "emaill">
+			<div class="input-field col s6">
 			  <input class="validate" type="email" name="razaoSocial" id="razaoSocial" />
 			  <label for="razaoSocial">Digite seu email</label>
 			</div>
+		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<textarea id="msg" class="materialize-textarea"></textarea>
 				<label for="msg">Mensagem</label>
 			</div>
 		</div>
+		</div>
 		</form>
-		</form>
-		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Enviar</a>
+		</div>
+		<div class = "container">
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Enviar</a>
+			</div>
 		</div>
 	</div>
-
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="static/js/materialize.min.js"></script>
