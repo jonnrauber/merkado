@@ -64,9 +64,7 @@ def getProdutosByFornecedor():
     sql = "SELECT idp ,nome, marca,categoria from produto WHERE fornecedor = '{}'".format(fornecedor)
     c.execute(sql)
     produtos = c.fetchall()
-    print("oi")
-    print(produtos[0][0])
-    return dict(produtos=produtos)
+    return produtos
 
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
@@ -132,5 +130,10 @@ def restrito():
     c.execute(sql)
     clientes = c.fetchall()
     return dict(requisicoes=requisicoes, clientes=clientes)
+
+@get('/relatoriosFornecedor')
+@view('relatoriofor')
+def relatorios():
+    pass
 
 run(host='localhost', port=8080)
