@@ -18,14 +18,24 @@
       <a href="/" class="left" id="logomerkado"><h3>MerKado</h3></a>
     </header>
     <main>
-      <div class='row'>
+      <div class='row' id="opcoes-restrito">
         <div class='col s12'>
-          <a href="#" value="Requisições de cadastro" id="get_req" onclick="display()">
-            Ver requisições de cadastro
-          </a>
+          <ul>
+            <li>
+              <a href="#" value="Requisições de cadastro" id="get_req" onclick="displayReq()">
+                Ver requisições de cadastro
+              </a>
+            </li>
+            <li>
+              <a href="#" value="Clientes cadastrados" id="get_cli" onclick="displayCli()">
+                Ver clientes cadastrados
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class='row'>
+      <hr />
+      <div class='row' id="painel-results">
         <div class='col s12' id='tabela-req' style="display: none">
           <table class='striped'>
             <thead>
@@ -39,6 +49,27 @@
             %for i in requisicoes:
               <tr>
                 %for j in range(1, len(i)):
+                  <td>{{i[j]}}</td>
+                %end
+              </tr>
+            %end
+          </table>
+        </div>
+
+        <div class='col s12' id='tabela-cli' style="display: none">
+          <table class='striped'>
+            <thead>
+              <th>CNPJ</th>
+              <th>Insc. Estadual</th>
+              <th>Razão Social</th>
+              <th>Nome Fantasia</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+              <th>+ detalhes</th>
+            </thead>
+            %for i in clientes:
+              <tr>
+                %for j in range(0, len(i)):
                   <td>
                     {{i[j]}}
                   </td>

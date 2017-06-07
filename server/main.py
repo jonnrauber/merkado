@@ -71,16 +71,37 @@ def getProdutosByFornecedor():
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
 def atualizacaoFornecedor():
-    #sql = "SELECT * FROM cliente WHERE cnpj = '{}'".format()
-    #c.execute(sql)
-    #tupla = c.fetchall()
-    #return dict(cadastro = tupla)
-    pass
+    cnpj = "administrador1" #provisório!
+    sql = "SELECT rua, numero, bairro, cidade, uf, cep, complemento, email, fone FROM cliente WHERE cnpj = '{}'".format(cnpj)
+    c.execute(sql)
+    tupla = c.fetchone()
+    return dict(fornecedor = tupla)
 
 @post("/atualizacaoFornecedor")
 @view('atualizafor')
 def atualizacaoFornecedor():
-    pass
+    cnpj = "administrador1" #provisório!
+    rua = str(request.forms.get('rua'))
+    numero = str(request.forms.get('numero'))
+    bairro = str(request.forms.get('bairro'))
+    cidade = str(request.forms.get('cidade'))
+    uf = str(request.forms.get('uf'))
+    cep = str(request.forms.get('cep'))
+    complemento = str(request.forms.get('complemento'))
+    if (complemento == 'None'):
+        complemento = ""
+    email = str(request.forms.get('email'))
+    telefone = str(request.forms.get('fone'))
+
+    sql = "UPDATE cliente SET rua = '{}', numero = '{}', bairro = '{}', \
+            cidade = '{}', uf = '{}', cep = '{}', complemento = '{}', \
+            email = '{}', fone = '{}' WHERE cnpj = '{}'".format(
+                rua, numero, bairro, cidade, uf, cep, complemento, email,
+                telefone, cnpj
+            )
+    c.execute(sql)
+    conn.commit()
+    redirect("/atualizacaoFornecedor")
 
 @route('/config')
 @view('config')
@@ -107,6 +128,9 @@ def restrito():
     sql = "SELECT * FROM req_cadastro"
     c.execute(sql)
     requisicoes = c.fetchall()
-    return dict(requisicoes=requisicoes)
+    sql = "SELECT * FROM cliente"
+    c.execute(sql)
+    clientes = c.fetchall()
+    return dict(requisicoes=requisicoes, clientes=clientes)
 
 run(host='localhost', port=8080)

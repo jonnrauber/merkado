@@ -27,6 +27,20 @@ $('.button-collapse').sideNav({
 	}
 );
 
-function display() {
-  $('#tabela-req').toggle();
+function displayReq() {
+  if ($('#tabela-req').css('display') == 'none') {
+    $('#tabela-req').show();
+    $('#tabela-cli').hide();
+  } else {
+    $('#tabela-req').hide();
+  }
+};
+
+function displayCli() {
+  if ($('#tabela-cli').css('display') == 'none') {
+    $('#tabela-cli').show();
+    $('#tabela-req').hide();
+  } else {
+    $('#tabela-cli').hide();
+  }
 };
