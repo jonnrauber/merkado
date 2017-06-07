@@ -23,10 +23,10 @@
 			<a href="#!user"><img class="circle" src="static/img/usu.jpg"></a>
 			<a href="#!name"><span class="black-text name">Fornecedor</span></a>
 		</div></li>
-		<li><a href="dashboardFornecedor"><i class="material-icons">perm_identity</i>Início</a></li>
-		<li><a href="#!"><i class="material-icons">shop</i> Produtos</a></li>
-		<li><a href="#!"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
-		<li><a href="#!"><i class="material-icons">trending_down</i>Relatórios</a></li>
+    <li><a href="dashboardFornecedor"><i class="material-icons">perm_identity</i>Início</a></li>
+		<li><a href="produtosFornecedor"><i class="material-icons">shop</i> Produtos</a></li>
+		<li><a href="atualizacaoFornecedor"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
+		<li><a href="relatoriosFornecedor"><i class="material-icons">trending_down</i>Relatórios</a></li>
 		<li><a href="#modalatendimento"><i class="material-icons">question_answer</i>Atendimento</a></li>
 	</ul>
 	<a href="#" data-activates="slide-out" class="button-collapse left hide-on-large-only"><i class="material-icons">menu</i></a>
@@ -48,7 +48,7 @@
 	<form action='delprod' method='post'>
 	<div class = "container">
 		<div id="content">
-	
+
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -62,7 +62,7 @@
 				%for i in produtos:
 					<tr>
 						<td>
-							<input name="group1" type="radio" id="test1" value = "'.$aux2[0].'" />
+							<input name="group1" type="radio" id="{{i[0]}}" value = "{{i[0]}}" />
 							<label for="test1"></label>
 						</td>
 						%for j in range(0, len(i)):
@@ -73,7 +73,7 @@
 					</tr>
 				%end
 
-				
+
 			</table>
 		</div>
 	</div>
@@ -121,7 +121,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="modalcadprod" class="modal">
 		<div class="modal-content">
 			<h4>Cadastro de produtos</h4>

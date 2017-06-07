@@ -23,7 +23,7 @@
 			<a href="#!user"><img class="circle" src="static/img/usu.jpg"></a>
 			<a href="#!name"><span class="black-text name">Fornecedor</span></a>
 		</div></li>
-    <li><a href="dashboardFornecedor"><i class="material-icons">perm_identity</i>Início</a></li>
+		<li><a href="dashboardFornecedor"><i class="material-icons">perm_identity</i>Início</a></li>
 		<li><a href="produtosFornecedor"><i class="material-icons">shop</i> Produtos</a></li>
 		<li><a href="atualizacaoFornecedor"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
 		<li><a href="relatoriosFornecedor"><i class="material-icons">trending_down</i>Relatórios</a></li>

@@ -16,8 +16,13 @@
   <div class="navbar-fixed">
     <nav id="menu">
       <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo">MerKado</a>
+        <a href="#" class="brand-logo">MerKado</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
+          <li><a href="#modalLogin" class="itens-menu waves-effect waves-light">Login</a></li>
+          <li><a href="#modalRegister" class="itens-menu waves-effect waves-light">Cadastre-se</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
           <li><a href="#modalLogin" class="itens-menu waves-effect waves-light">Login</a></li>
           <li><a href="#modalRegister" class="itens-menu waves-effect waves-light">Cadastre-se</a></li>
         </ul>

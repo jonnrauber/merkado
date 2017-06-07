@@ -96,9 +96,6 @@ def cadastroproduto():
 	redirect("/produtosFornecedor")
 	
 
-
-
-
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
 def atualizacaoFornecedor():
@@ -159,9 +156,14 @@ def restrito():
     sql = "SELECT * FROM req_cadastro"
     c.execute(sql)
     requisicoes = c.fetchall()
-    sql = "SELECT * FROM cliente"
+    sql = "SELECT cnpj, ie, razao_social, nome_fantasia, email, fone FROM cliente"
     c.execute(sql)
     clientes = c.fetchall()
     return dict(requisicoes=requisicoes, clientes=clientes)
+
+@get('/relatoriosFornecedor')
+@view('relatoriofor')
+def relatorios():
+    pass
 
 run(host='localhost', port=8080)
