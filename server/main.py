@@ -105,7 +105,7 @@ def restrito():
     sql = "SELECT * FROM req_cadastro"
     c.execute(sql)
     requisicoes = c.fetchall()
-    sql = "SELECT cpnj, ie, razao_social, nome_fantasia, email, fone FROM cliente"
+    sql = "SELECT * FROM cliente"
     c.execute(sql)
     clientes = c.fetchall()
     return dict(requisicoes=requisicoes, clientes=clientes)

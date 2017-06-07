@@ -27,7 +27,7 @@
               </a>
             </li>
             <li>
-              <a href="#" value="Clientes cadastrados" id="get_cli" onclick="displayClientes()">
+              <a href="#" value="Clientes cadastrados" id="get_cli" onclick="displayCli()">
                 Ver clientes cadastrados
               </a>
             </li>

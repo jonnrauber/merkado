@@ -27,8 +27,9 @@ $('.button-collapse').sideNav({
 );
 
 function displayReq() {
-  if ($('#tabela-reg').css('display') == 'none') {
+  if ($('#tabela-req').css('display') == 'none') {
     $('#tabela-req').show();
+    $('#tabela-cli').hide();
   } else {
     $('#tabela-req').hide();
   }
@@ -37,6 +38,7 @@ function displayReq() {
 function displayCli() {
   if ($('#tabela-cli').css('display') == 'none') {
     $('#tabela-cli').show();
+    $('#tabela-req').hide();
   } else {
     $('#tabela-cli').hide();
   }
