@@ -39,15 +39,18 @@ CREATE TABLE cliente(
 );
 
 CREATE TABLE produto(
-	idp integer NOT NULL primary key,
+	idp SERIAL NOT NULL primary key,
 	nome varchar(30) NOT NULL,
+	marca varchar(30) NOT NULL,
+	categoria varchar(30) NOT NULL,
+	imagem varchar(50) NOT NULL,
 	fornecedor varchar(14) NOT NULL,
 	constraint fk_produto_cliente foreign key(fornecedor) references cliente(cnpj)
 
 );
 
 CREATE TABLE precos(
-	id_prod integer NOT NULL,
+	id_prod SERIAL NOT NULL,
 	cnpj_mercado varchar(14) NOT NULL,
 	preco numeric NOT NULL,
 	constraint pk_precos primary key(id_prod, cnpj_mercado),
@@ -56,7 +59,7 @@ CREATE TABLE precos(
 );
 
 CREATE TABLE favoritos_usuario(
-	id_prod integer NOT NULL,
+	id_prod SERIAL NOT NULL,
 	user_app varchar(30) NOT NULL,
 	constraint pk_favoritos_usuario primary key(id_prod, user_app),
 	constraint fk_favoritos_usuario_usuario foreign key(user_app) references usuario(user_app),
@@ -65,3 +68,6 @@ CREATE TABLE favoritos_usuario(
 
 INSERT INTO cliente (cnpj, razao_social, nome_fantasia, rua, numero, bairro, cidade, uf, cep, email, fone, senha, tipo)
 	VALUES ('administrador1', 'administrador', 'eu ate administro', 'rua dos adm', '1', 'administrado', 'cidade do adm', 'sc', '12345678', 'adm@adm.adm.ad', '1234567890', 'admin', 'fornecedor');
+
+INSERT INTO produto VALUES(1, 'Coca-cola', 'Coca-cola', 'Bebidas', 'aushashuahus', 'administrador1');
+INSERT INTO produto VALUES(2, 'salgadinho Batata', 'Ruffles', 'Salgadinho', 'aushashuahussah', 'administrador1');	

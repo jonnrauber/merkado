@@ -49,17 +49,30 @@
 	
 			<table class="table table-striped">
 				<thead>
-					<th>ID</th>
-					<th>Nome</th>
-					<th>Marca</th>
-					<th>Categoria</th>
+					<tr>
+						<th>ID</th>
+						<th>NOME</th>
+						<th>MARCA</th>
+						<th>CATEGORIA</th>
+					</tr>
 				</thead>
+				%for i in produtos:
+					<tr>
+						%for j in range(1, len(i)):
+						<td>
+							{{i[j]}}
+						</td>
+						%end
+					</tr>
+				%end
+
+				
 			</table>
 		</div>
 	</div>
 	
 	<div class="fixed-action-btn">
-		<a class="btn-floating btn-large red" href="#modalatendimento">
+		<a class="btn-floating btn-large red" href="#modalcadprod">
 			<i class="large material-icons">add</i>
 		</a>
 	</div>
@@ -83,6 +96,45 @@
 		</div>
 		</div>
 		</form>
+		</div>
+		<div class = "container">
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Enviar</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="modalcadprod" class="modal">
+		<div class="modal-content">
+			<h4>Cadastro de produtos</h4>
+			<form action='register' method='post'>
+				<div class="container">
+					<div class="row">
+						<div class="input-field col s12">
+							<input class="validate" type="text" name="nomeprod" id="nomeprod" />
+							<label for="nomeprod">Nome</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<input class="validate" type="text" name="marcaprod" id="marcaprod" />
+							<label for="marcaprod">Marca</label>
+						</div>
+						<div class="input-field col s6">
+							<input class="validate" type="text" name="cateprod" id="cateprod" />
+							<label for="cateprod">Categoria</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s2">
+							Imagem
+						</div>
+						<div class="input-field col s6">
+							<input class="validate" type="file" name="imagem" id="imagem" />
+						</div>
+					</div>
+				</div>
+			</form>
 		</div>
 		<div class = "container">
 			<div class="modal-footer">

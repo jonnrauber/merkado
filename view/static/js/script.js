@@ -3,6 +3,7 @@ $(document).ready(function(){
    $('#modalLogin').modal();
    $('#modalRegister').modal();
    $('#modalatendimento').modal();
+   $('#modalcadprod').modal();
    $('.collapsible').collapsible();
    $('.fixed-action-btn').openFAB();
    $('.fixed-action-btn').closeFAB();

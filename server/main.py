@@ -1,6 +1,7 @@
 from bottle import route, run, template, static_file, view, post, get, redirect, request
 from connect import *
 import requests
+fornecedor = 'administrador1'
 
 s = requests.Session()
 
@@ -56,15 +57,16 @@ def posLogin():
 @get("/produtosFornecedor")
 @view('produtosfor')
 def produtos():
-    #listaProdutos = getProdutosByFornecedor()
-    #return dict(produtos=listaProdutos)
-    pass
+    listaProdutos = getProdutosByFornecedor()
+    return dict(produtos=listaProdutos)
 
-def getProdutosByFornecedor(fornecedor):
-    sql = "SELECT * FROM produto WHERE fornecedor = '{}'".format(fornecedor)
+def getProdutosByFornecedor():
+    sql = "SELECT idp ,nome, marca,categoria from produto WHERE fornecedor = '{}'".format(fornecedor)
     c.execute(sql)
     produtos = c.fetchall()
-    return produtos
+    print("oi")
+    print(produtos[0][0])
+    return dict(produtos=produtos)
 
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
