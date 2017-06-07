@@ -23,11 +23,11 @@
 			<a href="#!user"><img class="circle" src="static/img/usu.jpg"></a>
 			<a href="#!name"><span class="black-text name">Fornecedor</span></a>
 		</div></li>
-		<li><a href="dashboardFornecedor"><i class="material-icons">perm_identity</i>Início</a></li>
-		<li><a href="#!"><i class="material-icons">shop</i> Produtos</a></li>
-		<li><a href="#!"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
-		<li><a href="#!"><i class="material-icons">trending_down</i>Relatórios</a></li>
-		<li><a href="#modalatendimento"><i class="material-icons">question_answer</i>Atendimento</a></li>
+    <li><a href="dashboardFornecedor"><i class="material-icons">perm_identity</i>Início</a></li>
+    <li><a href="produtosfor"><i class="material-icons">shop</i> Produtos</a></li>
+    <li><a href="atualizafor"><i class="material-icons">mode_edit</i>Atualização Cadastral</a></li>
+    <li><a href="relatoriofor"><i class="material-icons">trending_down</i>Relatórios</a></li>
+    <li><a href="#modalatendimento"><i class="material-icons">question_answer</i>Atendimento</a></li>
 	</ul>
 	<a href="#" data-activates="slide-out" class="button-collapse left hide-on-large-only"><i class="material-icons">menu</i></a>
 
@@ -46,7 +46,7 @@
 	</div>
 	<div class = "container">
 		<div id="content">
-	
+
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -66,11 +66,11 @@
 					</tr>
 				%end
 
-				
+
 			</table>
 		</div>
 	</div>
-	
+
 	<div class="fixed-action-btn">
 		<a class="btn-floating btn-large red" href="#modalcadprod">
 			<i class="large material-icons">add</i>
@@ -103,7 +103,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="modalcadprod" class="modal">
 		<div class="modal-content">
 			<h4>Cadastro de produtos</h4>
