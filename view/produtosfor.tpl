@@ -44,12 +44,15 @@
 			<h5>Meus Produtos</h5>
 		</div>
 	</div>
+	
+	<form action='delprod' method='post'>
 	<div class = "container">
 		<div id="content">
 	
 			<table class="table table-striped">
 				<thead>
 					<tr>
+						<th>SELECIONE</th>	
 						<th>ID</th>
 						<th>NOME</th>
 						<th>MARCA</th>
@@ -58,10 +61,14 @@
 				</thead>
 				%for i in produtos:
 					<tr>
-						%for j in range(1, len(i)):
 						<td>
-							{{i[j]}}
+							<input name="group1" type="radio" id="test1" value = "'.$aux2[0].'" />
+							<label for="test1"></label>
 						</td>
+						%for j in range(0, len(i)):
+							<td>
+								{{i[j]}}
+							</td>
 						%end
 					</tr>
 				%end
@@ -70,7 +77,18 @@
 			</table>
 		</div>
 	</div>
-	
+	<div class="row">
+		<div class="input-field col s3">	
+		</div>
+		<div class="input-field col s3">	
+			<button class="btn waves-effect waves-light" type="submit" name="action">Excluir</button>
+		</div>
+		<div class="input-field col s3">	
+			<button class="btn waves-effect waves-light" type="submit" name="action">Alterar</button>
+		</div>
+	</div>
+
+	</form>
 	<div class="fixed-action-btn">
 		<a class="btn-floating btn-large red" href="#modalcadprod">
 			<i class="large material-icons">add</i>
@@ -80,7 +98,7 @@
 	  <div id="modalatendimento" class="modal">
 		<div class="modal-content">
 		<h4>Mande uma mensagem para o administrador</h4>
-		<form action='register' method='post'>
+		<form action='atendimento' method='post'>
 		<div class="container">
 		<div class="row">
 			<div class="input-field col s6">
@@ -107,7 +125,7 @@
 	<div id="modalcadprod" class="modal">
 		<div class="modal-content">
 			<h4>Cadastro de produtos</h4>
-			<form action='register' method='post'>
+			<form action='cadastroproduto' method='post'>
 				<div class="container">
 					<div class="row">
 						<div class="input-field col s12">
@@ -134,13 +152,14 @@
 						</div>
 					</div>
 				</div>
-			</form>
 		</div>
 		<div class = "container">
 			<div class="modal-footer">
-				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Enviar</a>
+				<button type="submit" class="modal-action modal-close right btn waves-effect waves-light">Entre</button>
 			</div>
 		</div>
+		
+			</form>
 	</div>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>

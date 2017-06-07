@@ -39,7 +39,7 @@ CREATE TABLE cliente(
 );
 
 CREATE TABLE produto(
-	idp SERIAL NOT NULL primary key,
+	idp SERIAL primary key,
 	nome varchar(30) NOT NULL,
 	marca varchar(30) NOT NULL,
 	categoria varchar(30) NOT NULL,

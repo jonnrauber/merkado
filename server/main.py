@@ -64,9 +64,40 @@ def getProdutosByFornecedor():
     sql = "SELECT idp ,nome, marca,categoria from produto WHERE fornecedor = '{}'".format(fornecedor)
     c.execute(sql)
     produtos = c.fetchall()
-    print("oi")
-    print(produtos[0][0])
-    return dict(produtos=produtos)
+    return produtos
+
+@post('/cadastroproduto')
+def cadastroproduto():
+	print("asuauhsauhshuas")
+	flag = 0
+	nome = str(request.forms.get('nomeprod'))
+	if (nome == None or len(nome) == 0):
+		flag = 1
+	marca = str(request.forms.get('marcaprod'))
+	if (marca == None or len(marca) == 0):
+		flag = 1
+	categoria = str(request.forms.get('cateprod'))
+	if (categoria == None or len(categoria) == 0):
+		flag = 1
+	imagem = str(request.forms.get('imagem'))
+	if (imagem == None or len(imagem) == 0):
+		flag = 1
+
+	if (flag == 1):
+		redirect("/produtosFornecedor")
+    
+	print("asuauhsauhshuas")
+    
+	sql = "INSERT INTO produto (nome,marca,categoria,imagem,fornecedor) \
+            VALUES ('{}', '{}', '{}', '{}', '{}')".format(
+            nome, marca, categoria, imagem, fornecedor)
+	c.execute(sql)
+	conn.commit()	
+	redirect("/produtosFornecedor")
+	
+
+
+
 
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
