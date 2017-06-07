@@ -127,9 +127,12 @@ text-align:center;
 
 #img-mulher {
   width: 600px;
-
 }
 
 #emaill{
 	padding: -30 px !important;
+}
+
+#opcoes-restrito{
+  height:250px !important;
 }

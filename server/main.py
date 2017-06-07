@@ -105,6 +105,9 @@ def restrito():
     sql = "SELECT * FROM req_cadastro"
     c.execute(sql)
     requisicoes = c.fetchall()
-    return dict(requisicoes=requisicoes)
+    sql = "SELECT cpnj, ie, razao_social, nome_fantasia, email, fone FROM cliente"
+    c.execute(sql)
+    clientes = c.fetchall()
+    return dict(requisicoes=requisicoes, clientes=clientes)
 
 run(host='localhost', port=8080)
