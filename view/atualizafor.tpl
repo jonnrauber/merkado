@@ -85,17 +85,17 @@
         <fieldset>
           <legend>Dados para contato</legend>
           <div class='row'>
-            <div class='col s10'>
+            <div class='col s7'>
               <label for="email">E-mail</label>
               <input class='validate' type='email' value='{{fornecedor[7]}}' id='email' name='email' required maxlength="50"/>
             </div>
-            <div class='col s6'>
+            <div class='col s5'>
               <label for='fone'>Telefone</label>
               <input class='validate' type='text' value='{{fornecedor[8]}}' id='fone' name='fone' required maxlength="20"/>
             </div>
           </div>
         </fieldset>
-        <input type='submit' class='btn waves-effect' value='Salvar'/>
+			<input type='submit' class='btn waves-effect' value='Salvar'/>
       </fieldset>
     </form>
 	</div>
