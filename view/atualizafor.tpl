@@ -43,7 +43,7 @@
 	<a href="/" >Sair</a>
 
 -->
-
+	<div class="container" id ="atualizacad">
 	<div id="content">
     <form action="#" method="post">
       <fieldset>
@@ -99,7 +99,7 @@
       </fieldset>
     </form>
 	</div>
-
+	</div>
 	  <div id="modalatendimento" class="modal">
 		<div class="modal-content">
 			<h4>Mande uma mensagem para o administrador</h4>

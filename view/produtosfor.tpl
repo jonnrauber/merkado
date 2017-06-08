@@ -62,8 +62,8 @@
 				%for i in produtos:
 					<tr>
 						<td>
-							<input name="group1" type="radio" id="{{i[0]}}" value = "{{i[0]}}" />
-							<label for="test1"></label>
+							<input name="selcad" type="radio" id="{{i[0]}}" value = "{{i[0]}}" />
+							<label for="{{i[0]}}"></label>
 						</td>
 						%for j in range(0, len(i)):
 							<td>
