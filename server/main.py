@@ -54,6 +54,19 @@ def register():
 def posLogin():
     pass
 
+@post('/atendimento')
+def mensagemEnv():
+	email = str(request.forms.get('email'))
+	msg = str(request.forms.get('msg'))
+
+    
+	sql = "INSERT INTO mensagemEnviada (cnpj,mensagem,email) \
+            VALUES ('{}', '{}', '{}')".format(
+            fornecedor, email, msg)
+	c.execute(sql)
+	conn.commit()	
+	redirect("/dashboardFornecedor")
+
 @get("/produtosFornecedor")
 @view('produtosfor')
 def produtos():
@@ -68,25 +81,10 @@ def getProdutosByFornecedor():
 
 @post('/cadastroproduto')
 def cadastroproduto():
-	print("asuauhsauhshuas")
-	flag = 0
 	nome = str(request.forms.get('nomeprod'))
-	if (nome == None or len(nome) == 0):
-		flag = 1
 	marca = str(request.forms.get('marcaprod'))
-	if (marca == None or len(marca) == 0):
-		flag = 1
 	categoria = str(request.forms.get('cateprod'))
-	if (categoria == None or len(categoria) == 0):
-		flag = 1
 	imagem = str(request.forms.get('imagem'))
-	if (imagem == None or len(imagem) == 0):
-		flag = 1
-
-	if (flag == 1):
-		redirect("/produtosFornecedor")
-    
-	print("asuauhsauhshuas")
     
 	sql = "INSERT INTO produto (nome,marca,categoria,imagem,fornecedor) \
             VALUES ('{}', '{}', '{}', '{}', '{}')".format(

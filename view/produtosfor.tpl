@@ -102,24 +102,24 @@
 		<div class="container">
 		<div class="row">
 			<div class="input-field col s6">
-			  <input class="validate" type="email" name="razaoSocial" id="razaoSocial" />
-			  <label for="razaoSocial">Digite seu email</label>
+			  <input class="validate" type="email" name="email" id="email" required />
+			  <label for="email">Digite seu email</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="msg" class="materialize-textarea"></textarea>
+				<textarea id="msg" name = "msg" class="materialize-textarea" required></textarea>
 				<label for="msg">Mensagem</label>
 			</div>
 		</div>
 		</div>
-		</form>
 		</div>
 		<div class = "container">
 			<div class="modal-footer">
-				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Enviar</a>
+				<button type="submit" class="right valign-wrapper btn waves-effect waves-light">Enviar</button>
 			</div>
 		</div>
+		</form>
 	</div>
 
 	<div id="modalcadprod" class="modal">
@@ -159,7 +159,7 @@
 			</div>
 		</div>
 		
-			</form>
+		</form>
 	</div>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>

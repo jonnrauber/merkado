@@ -100,28 +100,32 @@
     </form>
 	</div>
 	</div>
+	
 	  <div id="modalatendimento" class="modal">
 		<div class="modal-content">
-			<h4>Mande uma mensagem para o administrador</h4>
-		</div>
-		<form action='register' method='post'>
+		<h4>Mande uma mensagem para o administrador</h4>
+		<form action='atendimento' method='post'>
 		<div class="container">
 		<div class="row">
-			<div class="input-field col s6" id = "emaill">
-			  <input class="validate" type="email" name="razaoSocial" id="razaoSocial" />
-			  <label for="razaoSocial">Digite seu email</label>
+			<div class="input-field col s6">
+			  <input class="validate" type="email" name="email" id="email" required />
+			  <label for="email">Digite seu email</label>
 			</div>
+		</div>
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="msg" class="materialize-textarea"></textarea>
+				<textarea id="msg" name = "msg" class="materialize-textarea" required></textarea>
 				<label for="msg">Mensagem</label>
 			</div>
 		</div>
-		</form>
-		</form>
-		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Enviar</a>
 		</div>
+		</div>
+		<div class = "container">
+			<div class="modal-footer">
+				<button type="submit" class="right valign-wrapper btn waves-effect waves-light">Enviar</button>
+			</div>
+		</div>
+		</form>
 	</div>
 
   <!--Import jQuery before materialize.js-->

@@ -11,7 +11,7 @@ CREATE TABLE usuario(
 );
 
 CREATE TABLE req_cadastro(
-	req_cadastro_id SERIAL NOT NULL primary key,
+	req_cadastro_id SERIAL primary key,
 	razao_social varchar(80) NOT NULL,
 	cnpj varchar(14) NOT NULL,
 	telefone varchar(15) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE produto(
 );
 
 CREATE TABLE precos(
-	id_prod SERIAL NOT NULL,
+	id_prod SERIAL,
 	cnpj_mercado varchar(14) NOT NULL,
 	preco numeric NOT NULL,
 	constraint pk_precos primary key(id_prod, cnpj_mercado),
@@ -59,11 +59,26 @@ CREATE TABLE precos(
 );
 
 CREATE TABLE favoritos_usuario(
-	id_prod SERIAL NOT NULL,
+	id_prod SERIAL,
 	user_app varchar(30) NOT NULL,
 	constraint pk_favoritos_usuario primary key(id_prod, user_app),
 	constraint fk_favoritos_usuario_usuario foreign key(user_app) references usuario(user_app),
 	constraint fk_favoritos_usuario_produto foreign key(id_prod) references produto(idp)
+);
+
+CREATE TABLE mensagemEnviada(
+	idme SERIAL primary key,
+	cnpj varchar(30) NOT NULL,
+	mensagem varchar(300) NOT NULL,
+	email varchar(30) NOT NULL,
+	constraint fk_mensagem_usuario foreign key(cnpj) references cliente(cnpj)	
+);
+
+CREATE TABLE notificacao(
+	idn SERIAL primary key,
+	cnpj varchar(30) NOT NULL,
+	mensagem varchar(300) NOT NULL,
+	constraint fk_mensagem_usuario foreign key(cnpj) references cliente(cnpj)
 );
 
 INSERT INTO cliente (cnpj, razao_social, nome_fantasia, rua, numero, bairro, cidade, uf, cep, email, fone, senha, tipo)
