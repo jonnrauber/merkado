@@ -41,7 +41,7 @@
 	  <div id="modalatendimento" class="modal">
 		<div class="modal-content">
 		<h4>Mande uma mensagem para o administrador</h4>
-		<form action='atendimento' method='post'>
+		<form action='atendimento/relatoriosFornecedor' method='post'>
 		<div class="container">
 		<div class="row">
 			<div class="input-field col s6">

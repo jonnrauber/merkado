@@ -54,8 +54,8 @@ def register():
 def posLogin():
     pass
 
-@post('/atendimento')
-def mensagemEnv():
+@post('/atendimento/<parametro>')
+def mensagemEnv(parametro):
 	email = str(request.forms.get('email'))
 	msg = str(request.forms.get('msg'))
 
@@ -64,9 +64,10 @@ def mensagemEnv():
             VALUES ('{}', '{}', '{}')".format(
             fornecedor, email, msg)
 	c.execute(sql)
-	conn.commit()	
-	redirect("/dashboardFornecedor")
-
+	conn.commit()
+	parametro = "/" + parametro
+	redirect(parametro)
+	
 @get("/produtosFornecedor")
 @view('produtosfor')
 def produtos():
