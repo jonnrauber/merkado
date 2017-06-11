@@ -20,7 +20,7 @@
   <main>
     <div class="container" id ="alteraprod">
     	<div id="content">
-        <form action='atualizacaoprod/{{produto[0]}}' method="post">
+        <form action='atualizacaoprod' method="post">
             <h4>Alteração de produto</h4>
             <div class="col s1">&nbsp;</div>
               <div class='row'>
