@@ -21,44 +21,40 @@
     <div class="container" id ="atualizacad">
     	<div id="content">
         <form action="#" method="post">
-          <fieldset>
-            <legend>Atualização Cadastral</legend>
-            <fieldset>
-              <legend>Endereço</legend>
+            <h4>Atualização Cadastral</h4>
+            <div class="col s1">&nbsp;</div>
+              <h5>Endereço</h5>
               <div class='row'>
-                <div class='col s9'>
+                <div class='col s10'>
                   <label for="razao_social">Rua</label>
                   <input class='validate' type='text' value='{{fornecedor[0]}}' id='rua' name='rua' required />
                 </div>
-                <div class='col s3'>
+                <div class='col s2'>
                   <label for="numero">Número</label>
                   <input class='validate' type='text' value='{{fornecedor[1]}}' id='numero' name='numero' required maxlength="30"/>
                 </div>
-                <div class='col s5'>
+                <div class='col s6'>
                   <label for="bairro">Bairro</label>
                   <input class='validate' type='text' value='{{fornecedor[2]}}' id='bairro' name='bairro' required maxlength="30"/>
                 </div>
-                <div class='col s5'>
+                <div class='col s6'>
                   <label for="cidade">Cidade</label>
                   <input class='validate' type='text' value='{{fornecedor[3]}}' id='cidade' name='cidade' required maxlength="30"/>
+                </div>
+                <div class='col s5'>
+                  <label for="cep">CEP</label>
+                  <input class='validate' type='text' value='{{fornecedor[5]}}' id='cep' name='cep' required maxlength="9"/>
                 </div>
                 <div class='col s2'>
                   <label for="uf">UF</label>
                   <input class='validate' type='text' value='{{fornecedor[4]}}' id='uf' name='uf' required maxlength="2"/>
-                </div>
-                <div class='col s3'>
-                  <label for="cep">CEP</label>
-                  <input class='validate' type='text' value='{{fornecedor[5]}}' id='cep' name='cep' required maxlength="9"/>
                 </div>
                 <div class='col s5'>
                   <label for="complemento">Complemento</label>
                   <input class='validate' type='text' value='{{fornecedor[6]}}' id='complemento' name='complemento' maxlength="30"/>
                 </div>
               </div>
-            </fieldset>
-            <hr />
-            <fieldset>
-              <legend>Dados para contato</legend>
+              <h5>Dados para contato</h5>
               <div class='row'>
                 <div class='col s7'>
                   <label for="email">E-mail</label>
@@ -69,7 +65,6 @@
                   <input class='validate' type='text' value='{{fornecedor[8]}}' id='fone' name='fone' required maxlength="20"/>
                 </div>
               </div>
-            </fieldset>
     			<input type='submit' class='btn waves-effect' value='Salvar'/>
           </fieldset>
         </form>
