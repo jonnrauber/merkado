@@ -50,7 +50,7 @@ def register():
     redirect("/")
 
 @route('/dashboardFornecedor')
-@view('dashfor')
+@view('dashfor2')
 def posLogin():
     pass
 
@@ -59,7 +59,7 @@ def mensagemEnv(parametro):
 	email = str(request.forms.get('email'))
 	msg = str(request.forms.get('msg'))
 
-    
+
 	sql = "INSERT INTO mensagemEnviada (cnpj,mensagem,email) \
             VALUES ('{}', '{}', '{}')".format(
             fornecedor, email, msg)
@@ -67,7 +67,7 @@ def mensagemEnv(parametro):
 	conn.commit()
 	parametro = "/" + parametro
 	redirect(parametro)
-	
+
 @get("/produtosFornecedor")
 @view('produtosfor')
 def produtos():
@@ -86,14 +86,14 @@ def cadastroproduto():
 	marca = str(request.forms.get('marcaprod'))
 	categoria = str(request.forms.get('cateprod'))
 	imagem = str(request.forms.get('imagem'))
-    
+
 	sql = "INSERT INTO produto (nome,marca,categoria,imagem,fornecedor) \
             VALUES ('{}', '{}', '{}', '{}', '{}')".format(
             nome, marca, categoria, imagem, fornecedor)
 	c.execute(sql)
-	conn.commit()	
+	conn.commit()
 	redirect("/produtosFornecedor")
-	
+
 
 @get("/atualizacaoFornecedor")
 @view('atualizafor')

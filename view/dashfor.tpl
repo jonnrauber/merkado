@@ -35,35 +35,7 @@
 	<!-- <a href="/" >Sair</a>
 	<a href="#!">Notificações</a>
 	<a href="#!">Mensagens</a>
-
--->
-	  <div id="modalatendimento" class="modal">
-		<div class="modal-content">
-		<h4>Mande uma mensagem para o administrador</h4>
-		<form action='atendimento/dashboardFornecedor' method='post'>
-		<div class="container">
-		<div class="row">
-			<div class="input-field col s6">
-			  <input class="validate" type="email" name="email" id="email" required />
-			  <label for="email">Digite seu email</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="msg" name = "msg" class="materialize-textarea" required></textarea>
-				<label for="msg">Mensagem</label>
-			</div>
-		</div>
-		</div>
-		</div>
-		<div class = "container">
-			<div class="modal-footer">
-				<button type="submit" class="right valign-wrapper btn waves-effect waves-light">Enviar</button>
-			</div>
-		</div>
-		</form>
-	</div>
-
+  
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="static/js/materialize.min.js"></script>
