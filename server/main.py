@@ -2,6 +2,7 @@ from bottle import route, run, template, static_file, view, post, get, redirect,
 from connect import *
 import requests
 fornecedor = 'administrador1'
+prod = 5
 
 s = requests.Session()
 
@@ -94,7 +95,40 @@ def cadastroproduto():
 	conn.commit()
 	redirect("/produtosFornecedor")
 
+@post('/delaltprod')
+def delaltprod():
+	env = str(request.forms.get('env'))
+	selprod = str(request.forms.get('selcad'))
+	
+	if env == "Excluir":
+		sql = "DELETE FROM produto WHERE idp = '{}'".format(selprod);
+		c.execute(sql)
+		conn.commit()
+		redirect("/produtosFornecedor")	
+	if env == "Alterar":
+		prod = selprod
+		redirect("/atualizacaoproduto")
 
+@get("/atualizacaoproduto")
+@view('altprod')
+def atualizacaoProduto():
+	sql = "SELECT idp, nome, marca, categoria from produto where idp = '{}'".format(prod)
+	c.execute(sql)
+	tupla = c.fetchone()
+	return dict(produto = tupla)
+
+@post("/atualizacaoprod/<parametro>")
+@view('altprod')
+def atualizacaoProduto(parametro):
+    nome = str(request.forms.get('nomeprod'))
+    marca = str(request.forms.get('marcaprod'))
+    categoria = str(request.forms.get('cateprod'))
+    sql = "UPDATE produto SET nome = '{}', marca = '{}', categoria = '{}' WHERE idp = '{}'".format(
+                nome, marca, categoria, parametro)
+    c.execute(sql)
+    conn.commit()
+    redirect("/produtosFornecedor")
+   
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
 def atualizacaoFornecedor():

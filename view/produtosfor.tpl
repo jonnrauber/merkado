@@ -23,7 +23,7 @@
   		</div>
   	</div>
 
-  	<form action='delprod' method='post'>
+  	<form action='delaltprod' method='post'>
   	<div class = "container">
   		<div id="content">
 
@@ -59,10 +59,10 @@
   		<div class="input-field col s3">
   		</div>
   		<div class="input-field col s3">
-  			<button class="btn waves-effect waves-light" type="submit" name="action">Excluir</button>
+  			<button type="submit" class='btn waves-effect' name="env" value="Excluir" />Excluir</button>
   		</div>
   		<div class="input-field col s3">
-  			<button class="btn waves-effect waves-light" type="submit" name="action">Alterar</button>
+  			<button type="submit" class='btn waves-effect' name="env" value="Alterar"/>Alterar</button>
   		</div>
   	</div>
 

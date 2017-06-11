@@ -66,7 +66,6 @@
                 </div>
               </div>
     			<input type='submit' class='btn waves-effect' value='Salvar'/>
-          </fieldset>
         </form>
     	</div>
     </div>
