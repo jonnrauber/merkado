@@ -17,8 +17,9 @@
 <div w3-include-html="static/menu.html"></div>
 
   <main>
-    <h5 style="padding-left: 15px">Minhas Categorias</h5>
+
     <div class='container'>
+      <h4>Minhas Categorias</h4>
       <div class="row">
         <form action="categoriasFornecedor" method="post">
           <div class="col s2"></div>
@@ -55,8 +56,8 @@
                   {{i[j]}}
                 </td>
               %end
-              <td><a href='/updatecat/{{i[0]}}'><i class='material-icons'>edit</i></td>
-              <td><a href='/deletecat/{{i[0]}}'><i class='material-icons'>delete</i></a></td>
+              <td><a href='/updatecat/{{i[0]}}'><i class='material-icons' style='color:green'>edit</i></td>
+              <td><a href='/deletecat/{{i[0]}}'><i class='material-icons' style='color:red'>delete</i></a></td>
             </tr>
           %end
         </table>

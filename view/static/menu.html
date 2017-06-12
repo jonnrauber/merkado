@@ -1,6 +1,6 @@
-<ul id="slide-out" class="side-nav fixed z-depth-2">
+<ul id="slide-out" class="side-nav fixed z-depth-2" style="background:#e0e0e0;">
   <li class="center no-padding">
-    <div class="indigo darken-2 white-text" style="height: 180px;">
+    <div class="black-text" style="height: 180px;">
       <div class="row">
         <img style="margin-top: 5%;" width="100" height="100" href="static/img/usu.jpg" class="circle responsive-img" alt="profile"/>
 
@@ -21,29 +21,14 @@
 </ul>
 
 <header>
-  <ul class="dropdown-content" id="user_dropdown">
-    <li><a class="indigo-text" href="atualizacaoFornecedor">Perfil</a></li>
-    <li><a class="indigo-text" href="/">Sair</a></li>
-  </ul>
-
-  <nav class="indigo" role="navigation">
+  <nav class="z-depth-0 transparent">
     <div class="nav-wrapper">
-      <a data-activates="slide-out" class="button-collapse show-on-" href="#!"><i style='padding-left:15px' class='material-icons'>menu</i></a>
-
-      <ul class="right hide-on-med-and-down">
-        <li><a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a></li>
-      </ul>
-
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    </div>
-  </nav>
-
-  <nav>
-    <div class="nav-wrapper indigo darken-2">
-      <a style="margin-left: 20px;" class="breadcrumb" href="#!">Fornecedor</a>
-      <a class="breadcrumb" href="#!">Início</a>
-
-      <div style="margin-right: 20px;" id="timestamp" class="right"></div>
-    </div>
+        <a href="#" style="padding-left:15px" class="brand-logo black-text">MerKado</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/mensagens" class="black-text">mensagens</a></li>
+          <li><a href="#" class="black-text">notificações</a></li>
+          <li><a href="/" class="black-text">sair</a></li>
+        </ul>
+      </div>
   </nav>
 </header>

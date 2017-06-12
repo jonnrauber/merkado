@@ -17,14 +17,14 @@
 <div w3-include-html="static/menu.html"></div>
 
   <main>
-  	<div class="row">
-  		<div class="input-field col s12">
-  			<h5>Meus Produtos</h5>
-  		</div>
-  	</div>
+    <div class = "container">
+      <div class="row">
+    		<div class="input-field col s12">
+    			<h4>Meus Produtos</h4>
+    		</div>
+    	</div>
 
-  	<form action='delaltprod' method='post'>
-  	<div class = "container">
+  	  <form action='delaltprod' method='post'>
   		<div id="content">
 
   			<table class="table table-striped">
@@ -59,10 +59,14 @@
   		<div class="input-field col s3">
   		</div>
   		<div class="input-field col s3">
-  			<button type="submit" class='btn waves-effect' name="env" value="Excluir" />Excluir</button>
+  			<button type="submit" class='btn waves-effect red' name="env" value="Excluir" />
+          <i class='material-icons left'>delete</i>Excluir
+        </button>
   		</div>
   		<div class="input-field col s3">
-  			<button type="submit" class='btn waves-effect' name="env" value="Alterar"/>Alterar</button>
+  			<button type="submit" class='btn waves-effect green' name="env" value="Alterar"/>
+          <i class='material-icons left'>edit</i>Alterar
+        </button>
   		</div>
   	</div>
 
@@ -70,7 +74,7 @@
   </main>
 	<div class="fixed-action-btn">
 		<a class="btn-floating btn-large red" href="#modalcadprod">
-			<i class="large material-icons">add</i>
+			<i class="large material-icons green">add</i>
 		</a>
 	</div>
 
