@@ -52,20 +52,20 @@
             </div>
           </div>
           <div class="row">
-            <a href="#!">
+            <a href="produtosFornecedor">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989970/product_mdq6fq.png" class="responsive-img" /><br>
-                <span class="indigo-text text-lighten-1"><h5>Product</h5></span>
+                <span class="indigo-text text-lighten-1"><h5>Produtos</h5></span>
               </div>
             </a>
 
             <div class="col s1">&nbsp;</div>
             <div class="col s1">&nbsp;</div>
 
-            <a href="#!">
+            <a href="categoriasFornecedor">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989970/stack_rwg2mz.png" class="responsive-img" /><br>
-                <span class="indigo-text text-lighten-1"><h5>Orders</h5></span>
+                <span class="indigo-text text-lighten-1"><h5>Categorias</h5></span>
               </div>
             </a>
           </div>

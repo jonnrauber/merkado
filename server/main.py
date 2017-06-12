@@ -17,30 +17,12 @@ def start():
 
 @post('/register')
 def register():
-    flag = 0
     razaoSocial = str(request.forms.get('razaoSocial'))
-    if (razaoSocial == None or len(razaoSocial) == 0):
-        print("Erro! Razão Social campo obrigatório.")
-        flag = 1
     cnpj = str(request.forms.get('cnpj'))
-    if (cnpj == None or len(cnpj) == 0):
-        print("Erro! CNPJ campo obrigatório.")
-        flag = 1
     telefone = str(request.forms.get('fone'))
-    if (telefone == None or len(telefone) == 0):
-        print("Erro! Telefone campo obrigatório.")
-        flag = 1
     email = str(request.forms.get('email'))
-    if (email == None or len(email) == 0):
-        print("Erro! E-mail campo obrigatório.")
-        flag = 1
     tipo = str(request.forms.get('tipo'))
     mensagem = str(request.forms.get('msg'))
-    if (mensagem == None or len(mensagem) == 0):
-        print("Erro! Mensagem campo obrigatório.")
-        flag = 1
-    if (flag == 1):
-        redirect("/")
 
     sql = "INSERT INTO req_cadastro (razao_social, cnpj, telefone, email, tipo, mensagem) \
             VALUES ('{}', '{}', '{}', '{}', '{}', '{}')".format(
@@ -69,14 +51,54 @@ def mensagemEnv(parametro):
 	parametro = "/" + parametro
 	redirect(parametro)
 
+@get('/categoriasFornecedor')
+@view('categoriasfor')
+def categorias():
+    sql = "SELECT id_cat, nome FROM categoria"
+    c.execute(sql)
+    tuplas = c.fetchall()
+    return dict(categorias = tuplas)
+
+@post('/categoriasFornecedor')
+@view('categoriasfor')
+def categorias():
+    nome_categoria = request.forms.get('nome_categoria')
+
+    sql = "INSERT INTO categoria (nome,fornecedor) VALUES ('{}','{}')".format(nome_categoria,fornecedor)
+    c.execute(sql)
+    conn.commit()
+    redirect('/categoriasFornecedor')
+
+@get('/deletecat/<id>')
+def deleteCategoria(id):
+    sql = "DELETE FROM categoria WHERE id_cat = {}".format(id)
+    c.execute(sql)
+    conn.commit()
+    redirect('/categoriasFornecedor')
+
+@post('/updatecat/<id>')
+def updateCategoria(id):
+    nome_categoria = request.forms.get('nome_categoria')
+    sql = "UPDATE categoria SET nome = '{}' WHERE id_cat = {}".format(nome_categoria, id)
+    c.execute(sql)
+    conn.commit()
+    redirect('/categoriasFornecedor')
+
 @get("/produtosFornecedor")
 @view('produtosfor')
 def produtos():
+    listaCategorias = getCategoriasByFornecedor()
     listaProdutos = getProdutosByFornecedor()
-    return dict(produtos=listaProdutos)
+    return dict(produtos=listaProdutos, categorias=listaCategorias)
+
+def getCategoriasByFornecedor():
+    sql = "SELECT id_cat, nome from categoria WHERE fornecedor = '{}'".format(fornecedor)
+    c.execute(sql)
+    produtos = c.fetchall()
+    return produtos
 
 def getProdutosByFornecedor():
-    sql = "SELECT idp ,nome, marca,categoria from produto WHERE fornecedor = '{}'".format(fornecedor)
+    sql = "SELECT idp, nome, marca, categoria from produto WHERE fornecedor = '{}'".format(fornecedor)
     c.execute(sql)
     produtos = c.fetchall()
     return produtos
@@ -100,12 +122,12 @@ def delaltprod():
 	global prod
 	env = str(request.forms.get('env'))
 	selprod = int(request.forms.get('selcad'))
-	
+
 	if env == "Excluir":
 		sql = "DELETE FROM produto WHERE idp = '{}'".format(selprod);
 		c.execute(sql)
 		conn.commit()
-		redirect("/produtosFornecedor")	
+		redirect("/produtosFornecedor")
 	if env == "Alterar":
 		prod = selprod
 		redirect('/atualizacaoproduto')
@@ -113,10 +135,11 @@ def delaltprod():
 @get('/atualizacaoproduto')
 @view('altprod')
 def atualizacaoProduto():
-	sql = "SELECT idp, nome, marca, categoria from produto where idp = '{}'".format(prod)
-	c.execute(sql)
-	tupla = c.fetchone()
-	return dict(produto = tupla)
+    listaCategorias = getCategoriasByFornecedor()
+    sql = "SELECT idp, nome, marca, categoria from produto where idp = '{}'".format(prod)
+    c.execute(sql)
+    tupla = c.fetchone()
+    return dict(produto = tupla, categorias=listaCategorias)
 
 @post("/atualizacaoprod")
 @view('altprod')
@@ -129,7 +152,7 @@ def atualizacaoProd():
     c.execute(sql)
     conn.commit()
     redirect("/produtosFornecedor")
-   
+
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
 def atualizacaoFornecedor():

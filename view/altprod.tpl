@@ -32,9 +32,18 @@
                   <label for="numero">Marca</label>
                   <input class='validate' type='text' value='{{produto[2]}}' id='numero' name='marcaprod' required maxlength="30"/>
                 </div>
-                <div class='col s4'>
-                  <label for="bairro">categoria</label>
-                  <input class='validate' type='text' value='{{produto[3]}}' id='bairro' name='cateprod' required maxlength="30"/>
+                <div class='input-field col s4'>
+                  <select name="cateprod">
+                    <option value="" disable>Escolha uma categoria</option>
+                    %for i in categorias:
+                      %if i[1] == produto[3]:
+                        <option value="{{i[1]}}" selected>{{i[1]}}</option>
+                      %else:
+                        <option value="{{i[1]}}">{{i[1]}}</option>
+                      %end
+                    %end
+                  </select>
+    							<label>Categoria</label>
                 </div>
               </div>
 				<input type='submit' class='btn waves-effect' value='Salvar'/>

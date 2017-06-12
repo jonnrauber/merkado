@@ -4,6 +4,7 @@ $(document).ready(function(){
    $('#modalRegister').modal();
    $('#modalatendimento').modal();
    $('#modalcadprod').modal();
+   $('#modalcadcat').modal();
    $('.collapsible').collapsible();
    $('.fixed-action-btn').openFAB();
    $('.fixed-action-btn').closeFAB();

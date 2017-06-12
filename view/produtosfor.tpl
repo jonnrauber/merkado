@@ -85,18 +85,23 @@
 				<div class="container">
 					<div class="row">
 						<div class="input-field col s12">
-							<input class="validate" type="text" name="nomeprod" id="nomeprod" />
+							<input class="validate" type="text" name="nomeprod" id="nomeprod" required/>
 							<label for="nomeprod">Nome</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col s6">
-							<input class="validate" type="text" name="marcaprod" id="marcaprod" />
+							<input class="validate" type="text" name="marcaprod" id="marcaprod" required/>
 							<label for="marcaprod">Marca</label>
 						</div>
 						<div class="input-field col s6">
-							<input class="validate" type="text" name="cateprod" id="cateprod" />
-							<label for="cateprod">Categoria</label>
+							<select name="cateprod">
+                <option value="" disable selected>Escolha uma categoria</option>
+                %for i in categorias:
+                  <option value="{{i[1]}}">{{i[1]}}</option>
+                %end
+              </select>
+							<label>Categoria</label>
 						</div>
 					</div>
 					<div class="row">
