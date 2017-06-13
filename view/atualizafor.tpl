@@ -46,11 +46,11 @@
               </div>
               <div class='col s5'>
                 <label for="cep">CEP</label>
-                <input class='validate' type='text' value='{{fornecedor[5]}}' id='cep' name='cep' required maxlength="9"/>
+                <input class='validate' type='text' value='{{fornecedor[5]}}' id='cep' name='cep' data-mask="00000-000" required />
               </div>
               <div class='col s2'>
                 <label for="uf">UF</label>
-                <input class='validate' type='text' value='{{fornecedor[4]}}' id='uf' name='uf' required maxlength="2"/>
+                <input class='validate' type='text' value='{{fornecedor[4]}}' id='uf' name='uf' data-mask="SS" required/>
               </div>
               <div class='col s5'>
                 <label for="complemento">Complemento</label>
@@ -65,7 +65,7 @@
               </div>
               <div class='col s5'>
                 <label for='fone'>Telefone</label>
-                <input class='validate' type='text' value='{{fornecedor[8]}}' id='fone' name='fone' required maxlength="20"/>
+                <input class='validate' type='text' value='{{fornecedor[8]}}' id='fone' name='fone' data-mask="(00) 0000-00000" required/>
               </div>
             </div>
     			<input type='submit' class='btn waves-effect' value='Salvar'/>
@@ -82,6 +82,7 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="static/js/jquery.mask.js"></script>
   <script type="text/javascript" src="static/js/materialize.min.js"></script>
   <script type="text/javascript" src="static/js/script.js"></script>
   <script src="static/js/scriptdash.js"></script>
