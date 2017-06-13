@@ -1,4 +1,6 @@
 from bottle import route, run, template, static_file, view, post, get, redirect, request
+import shutil
+import os
 from connect import *
 import requests
 fornecedor = 'administrador1'
@@ -108,7 +110,24 @@ def cadastroproduto():
 	nome = str(request.forms.get('nomeprod'))
 	marca = str(request.forms.get('marcaprod'))
 	categoria = str(request.forms.get('cateprod'))
-	imagem = str(request.forms.get('imagem'))
+	imagem = request.files.get('imagem')
+	
+	name, ext = os.path.splitext(imagem.filename)
+	if ext not in ('.png', '.jpg', '.jpeg'):
+		print("Tipo de arquivo nao permitido")
+		redirect("/produtosFornecedor")
+	
+	save_path = "static/img"
+	if not os.path.exists(save_path):
+		os.makedirs(save_path)
+	
+	file_path = "{path}/{file}".format(path=save_path, file = imagem.filename)
+	
+	if os.path.exists(file_path):
+		print("Arquivo ja existente")
+		redirect("/produtosFornecedor")
+		
+	imagem.save(file_path)
 
 	sql = "INSERT INTO produto (nome,marca,categoria,imagem,fornecedor) \
             VALUES ('{}', '{}', '{}', '{}', '{}')".format(

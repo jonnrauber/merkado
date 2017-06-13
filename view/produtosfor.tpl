@@ -85,7 +85,7 @@
   <div id="modalcadprod" class="modal">
 		<div class="modal-content">
 			<h4>Cadastro de produtos</h4>
-			<form action='cadastroproduto' method='post'>
+			<form action='cadastroproduto' method='post' enctype="multipart/form-data">
 				<div class="container">
 					<div class="row">
 						<div class="input-field col s12">
