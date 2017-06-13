@@ -131,7 +131,7 @@ def cadastroproduto():
 
 	sql = "INSERT INTO produto (nome,marca,categoria,imagem,fornecedor) \
             VALUES ('{}', '{}', '{}', '{}', '{}')".format(
-            nome, marca, categoria, imagem, fornecedor)
+            nome, marca, categoria, imagem.filename, fornecedor)
 	c.execute(sql)
 	conn.commit()
 	redirect("/produtosFornecedor")
@@ -210,7 +210,8 @@ def atualizacaoFornecedor():
             )
     c.execute(sql)
     conn.commit()
-    redirect("/atualizacaoFornecedor")
+    redirect
+    ("/atualizacaoFornecedor")
 
 @route('/config')
 @view('config')
