@@ -1,16 +1,16 @@
 $(document).ready(function(){
-   $('.parallax').parallax();
-   $('#modalLogin').modal();
-   $('#modalRegister').modal();
-   $('#modalatendimento').modal();
-   $('#modalcadprod').modal();
-   $('#modalcadcat').modal();
-   $('.collapsible').collapsible();
-   $('.fixed-action-btn').openFAB();
-   $('.fixed-action-btn').closeFAB();
-   $('.fixed-action-btn.toolbar').openToolbar();
-   $('.fixed-action-btn.toolbar').closeToolbar();
-   $(".button-collapse").sideNav();
+  $('.parallax').parallax();
+  $('#modalLogin').modal();
+  $('#modalRegister').modal();
+  $('#modalatendimento').modal();
+  $('#modalcadprod').modal();
+  $('#modalcadcat').modal();
+  $('.collapsible').collapsible();
+  $('.fixed-action-btn').openFAB();
+  $('.fixed-action-btn').closeFAB();
+  $('.fixed-action-btn.toolbar').openToolbar();
+  $('.fixed-action-btn.toolbar').closeToolbar();
+  $(".button-collapse").sideNav();
  });
 
 (function () {

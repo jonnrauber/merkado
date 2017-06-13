@@ -38,7 +38,7 @@
 		<div class="container">
 		  <p>
 			<div class="input-field col s12">
-			  <input class="validate" type="text" name="cnpj" id="cnpj" required />
+			  <input class="validate" type="text" name="cnpj" id="cnpj" data-mask="00.000.000/0000-00" required />
 			  <label for="cnpj">CNPJ</label>
 			</div>
 		  </p>
@@ -78,11 +78,11 @@
   			  <label for="razaoSocial">Razão Social</label>
   			</div>
   			<div class="input-field col s12">
-  			  <input class="validate" type="text" name="cnpj" id="cnpj" data-mask="00.000.000/0000.00" data-mask-selectonfocus="true" maxlength="14" required/>
+  			  <input class="validate" type="text" name="cnpj" id="cnpj" data-mask="00.000.000/0000-00" required/>
   			  <label for="cnpj">CNPJ</label>
   			</div>
   			<div class="input-field col s12">
-  			  <input class="validate" type="text" name="fone" id="fone" data-mask="(00) 0000-0000" data-mask-selectonfocus="true" required/>
+  			  <input class="validate" type="text" name="fone" id="fone" data-mask="(00) 0000-0000#" required/>
   			  <label for="fone">Telefone</label>
   			</div>
   			<div class="input-field col s12">
@@ -168,7 +168,7 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="static/js/jquery.maskedinput.js"></script>
+  <script type="text/javascript" src="static/js/jquery.mask.js"></script>
   <script type="text/javascript" src="static/js/materialize.min.js"></script>
   <script type="text/javascript" src="static/js/script.js"></script>
 </body>
