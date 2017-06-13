@@ -119,18 +119,23 @@ def cadastroproduto():
 
 @post('/delaltprod')
 def delaltprod():
-	global prod
-	env = str(request.forms.get('env'))
-	selprod = int(request.forms.get('selcad'))
+    global prod
 
-	if env == "Excluir":
-		sql = "DELETE FROM produto WHERE idp = '{}'".format(selprod);
-		c.execute(sql)
-		conn.commit()
-		redirect("/produtosFornecedor")
-	if env == "Alterar":
-		prod = selprod
-		redirect('/atualizacaoproduto')
+    env = str(request.forms.get('env'))
+    selprod = request.forms.get('selcad')
+    if(selprod == None):
+        redirect('/produtosFornecedor')
+    else:
+        selprod = int(selprod)
+
+    if env == "Excluir":
+        sql = "DELETE FROM produto WHERE idp = '{}'".format(selprod);
+        c.execute(sql)
+        conn.commit()
+        redirect("/produtosFornecedor")
+    if env == "Alterar":
+        prod = selprod
+        redirect('/atualizacaoproduto')
 
 @get('/atualizacaoproduto')
 @view('altprod')
