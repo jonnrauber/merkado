@@ -57,58 +57,58 @@
           <div class='row'> <!-- primeira linha -->
             <!-- cnpj -->
             <div class='input-field col s6'>
-              <input placeholder="CNPJ" id="cnpj" name='cnpj' type="text" class="validate" data-mask="00.000.000/0000-00">
+              <input placeholder="CNPJ" id="cnpj" name='cnpj' type="text" class="validate" data-mask="00.000.000/0000-00" minlength="18" required>
               <label for="cnpj">CNPJ</label>
             </div>
             <!-- inscrição estadual -->
             <div class='input-field col s6'>
-              <input placeholder="IE" id="ie" name='ie' type="text" class="validate" data-mask="000.000.000">
+              <input placeholder="IE" id="ie" name='ie' type="text" class="validate" data-mask="000.000.000" minlength="11" required>
               <label for="ie">Inscrição Estadual</label>
             </div>
           </div>
           <div class='row'> <!-- segunda linha -->
             <!-- razao social -->
             <div class="input-field col s6">
-              <input placeholder="Razão Social" id="razao_social" name='razao_social' type="text" class="validate">
+              <input placeholder="Razão Social" id="razao_social" name='razao_social' type="text" class="validate" required>
               <label for="razao_social">Razão Social</label>
             </div>
             <!-- nome fantasia -->
             <div class="input-field col s6">
-              <input placeholder="Nome Fantasia" id="nome_fantasia" name='nome_fantasia' type="text" class="validate">
+              <input placeholder="Nome Fantasia" id="nome_fantasia" name='nome_fantasia' type="text" class="validate" required>
               <label for="nome_fantasia">Nome Fantasia</label>
             </div>
           </div>
           <div class='row'> <!-- terceira linha -->
             <!-- rua -->
             <div class="input-field col s5">
-              <input placeholder="Rua/Avenida/Logradouro" id="rua" name='rua' type="text" class="validate">
+              <input placeholder="Rua/Avenida/Logradouro" id="rua" name='rua' type="text" class="validate" required>
               <label for="rua">Rua/Avenida/Logradouro</label>
             </div>
             <!-- numero -->
             <div class="input-field col s2">
-              <input placeholder="Número" id="numero" name='numero' type="text" class="validate" data-mask="9999">
+              <input placeholder="Número" id="numero" name='numero' type="text" class="validate" data-mask="9999" required>
               <label for="numero">Número</label>
             </div>
             <!-- bairro -->
             <div class="input-field col s5">
-              <input placeholder="Bairro" id="bairro" name='bairro' type="text" class="validate">
+              <input placeholder="Bairro" id="bairro" name='bairro' type="text" class="validate" required>
               <label for="bairro">Bairro</label>
             </div>
           </div>
           <div class='row'> <!-- quarta linha -->
             <!-- cidade -->
             <div class="input-field col s6">
-              <input placeholder="Cidade" id="cidade" name='cidade' type="text" class="validate">
+              <input placeholder="Cidade" id="cidade" name='cidade' type="text" class="validate" required>
               <label for="cidade">Cidade</label>
             </div>
             <!-- uf -->
             <div class="input-field col s2">
-              <input placeholder="UF" id="uf" name='uf' type="text" class="validate" data-mask="SS">
+              <input placeholder="UF" id="uf" name='uf' type="text" class="validate" data-mask="SS" required>
               <label for="uf">Estado/UF</label>
             </div>
             <!-- cep -->
             <div class="input-field col s4">
-              <input placeholder="CEP" id="cep" name='cep' type="text" class="validate" data-mask="00000-000">
+              <input placeholder="CEP" id="cep" name='cep' type="text" class="validate" data-mask="00000-000" required>
               <label for="cep">CEP</label>
             </div>
           </div>
@@ -120,19 +120,19 @@
             </div>
             <!-- fone -->
             <div class="input-field col s4">
-              <input placeholder="Telefone" id="fone" name='fone' type="text" class="validate" data-mask="(00) 0000-00000">
+              <input placeholder="Telefone" id="fone" name='fone' type="text" class="validate" data-mask="(00) 0000-00000" required>
               <label for="fone">Telefone</label>
             </div>
           </div>
           <div class='row'> <!-- sexta linha -->
             <!-- email -->
             <div class="input-field col s6">
-              <input placeholder="email@exemplo.com.br" id="email" name='email' type="email" class="validate">
+              <input placeholder="email@exemplo.com.br" id="email" name='email' type="email" class="validate" required>
               <label for="email">E-mail</label>
             </div>
             <!-- senha -->
             <div class="input-field col s6">
-              <input placeholder="********" id="senha" name='senha' type="password" class="validate" min-length="8">
+              <input placeholder="********" id="senha" name='senha' type="password" class="validate" minlength="8" required>
               <label for="senha">Senha</label>
             </div>
           </div>

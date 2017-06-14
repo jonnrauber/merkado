@@ -182,17 +182,17 @@ def atualizacaoProd():
 		if ext not in ('.png', '.jpg', '.jpeg'):
 			print("Tipo de arquivo nao permitido")
 			redirect("/produtosFornecedor")
-	
+
 		save_path = "static/img"
 		if not os.path.exists(save_path):
 			os.makedirs(save_path)
-	
+
 		file_path = "{path}/{file}".format(path=save_path, file = imagem.filename)
-	
+
 		if os.path.exists(file_path):
 			print("Arquivo ja existente")
 			redirect("/produtosFornecedor")
-		
+
 		imagem.save(file_path)
 		sql = "UPDATE produto SET nome = '{}', marca = '{}', categoria = '{}', imagem = '{}' WHERE idp = '{}'".format(nome, marca, categoria, imagem.filename, prod)
 		c.execute(sql)
@@ -242,7 +242,7 @@ def config():
 
 @post('/login')
 def login():
-    cnpj = str(request.forms.get('cnpj'))
+    cnpj = re.sub('[.-/-]', '', str(request.forms.get('cnpj')))
     senha = str(request.forms.get('senha'))
 
     sql = "select * from cliente c where c.cnpj = '{}' and c.senha = '{}'".format(cnpj, senha)
@@ -267,7 +267,7 @@ def restrito_clientes():
 @post('/restrito/clientes')
 def cadastro_clientes():
     cnpj = str(request.forms.get('cnpj'))
-    cnpj = re.sub('[.-]', '', cnpj)
+    cnpj = re.sub('[.-/-]', '', cnpj)
     ie = str(request.forms.get('ie'))
     ie = re.sub('[.]', '', ie)
     razao_social = str(request.forms.get('razao_social'))
