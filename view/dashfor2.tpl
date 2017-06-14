@@ -114,7 +114,7 @@
             <a href="#!">
               <div style="padding: 15px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989969/squares_dylwo9.png" class="responsive-img" /><br>
-                <span class="indigo-text text-lighten-1"><h5>+ visualizados</h5></span>
+                <span class="indigo-text text-lighten-1"><h5>visualizados</h5></span>
               </div>
             </a>
             <div class="col s1">&nbsp;</div>
@@ -123,7 +123,7 @@
             <a href="#!">
               <div style="padding: 15px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989969/squares_dylwo9.png" class="responsive-img" /><br>
-                <span class="truncate indigo-text text-lighten-1"><h5>+ Favoritados</h5></span>
+                <span class="truncate indigo-text text-lighten-1"><h5>favoritados</h5></span>
               </div>
             </a>
           </div>
@@ -132,7 +132,7 @@
     </div>
   </main>
 
-  <footer class="indigo page-footer">
+  <footer class="indigo lighten-2 page-footer">
     <div class="container">
       <div class="row">
         <div class="col s12">
