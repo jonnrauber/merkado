@@ -4,7 +4,7 @@
 <head>
   <title>Dashboard</title>
 
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="/static/js/w3.js"></script>
 
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
   <div w3-include-html="static/menu.html"></div>
 
   <main>
