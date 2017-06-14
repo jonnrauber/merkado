@@ -109,18 +109,23 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="input-field col s2">
-							Imagem
-						</div>
-						<div class="input-field col s6">
-							<input class="validate" type="file" name="imagem" id="imagem" />
-						</div>
+						<div class='col s12'>
+								<div class="file-field input-field">
+									<div class="btn">
+										<span>Carregar Imagem</span>
+										<input type="file" name = "imagem" id = "imagem">
+									</div>
+									<div class="file-path-wrapper">
+										<input class="file-path validate" type="text">
+									</div>
+								</div>
+							</div>
 					</div>
 				</div>
 		</div>
 		<div class = "container">
 			<div class="modal-footer">
-				<button type="submit" class="modal-action modal-close right btn waves-effect waves-light">Entre</button>
+				<button type="submit" class="modal-action modal-close right btn waves-effect waves-light">Salvar</button>
 			</div>
 		</div>
 

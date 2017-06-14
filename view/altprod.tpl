@@ -20,17 +20,17 @@
   <main>
     <div class="container" id ="alteraprod">
     	<div id="content">
-        <form action='atualizacaoprod' method="post">
+        <form action='atualizacaoprod' method="post" enctype="multipart/form-data">
             <h4>Alteração de produto</h4>
             <div class="col s1">&nbsp;</div>
               <div class='row'>
                 <div class='col s4'>
-                  <label for="razao_social">Nome</label>
-                  <input class='validate' type='text' value='{{produto[1]}}' id='rua' name='nomeprod' required />
+                  <label for="nomeprod">Nome</label>
+                  <input class='validate' type='text' value='{{produto[1]}}' id='nomeprod' name='nomeprod' required />
                 </div>
                 <div class='col s4'>
-                  <label for="numero">Marca</label>
-                  <input class='validate' type='text' value='{{produto[2]}}' id='numero' name='marcaprod' required maxlength="30"/>
+                  <label for="marcaprod">Marca</label>
+                  <input class='validate' type='text' value='{{produto[2]}}' id='marcaprod' name='marcaprod' required />
                 </div>
                 <div class='input-field col s4'>
                   <select name="cateprod">
@@ -45,8 +45,31 @@
                   </select>
     							<label>Categoria</label>
                 </div>
-              </div>
-				<input type='submit' class='btn waves-effect' value='Salvar'/>
+            </div>
+			<div class='row'>
+				<div class='col s2'>
+					<div class = "imagemprod">
+						<img class="responsive-img" src="/static/img/{{produto[4]}}">
+					</div>
+				</div>
+				<div class='col s8'>
+					<div class="file-field input-field">
+						<div class="btn">
+						     <span>Carregar Imagem</span>
+						     <input type="file" id = "imagem" name = "imagem">
+					    </div>
+					    <div class="file-path-wrapper">
+							<input class="file-path validate" type="text" id = "imagem" name = "imagem">
+						</div>
+					</div>
+				</div>
+          </div>
+			<div class='row'>
+				<div class='col s5'></div>
+				<div class='col s2'>
+					<input type='submit' class='btn waves-effect' value='Salvar'/>
+				</div>
+			</div>
         </form>
     	</div>
     </div>

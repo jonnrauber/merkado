@@ -111,7 +111,9 @@ def cadastroproduto():
 	marca = str(request.forms.get('marcaprod'))
 	categoria = str(request.forms.get('cateprod'))
 	imagem = request.files.get('imagem')
-	
+	print(imagem.filename)
+	print("auhshausuhauh")
+
 	name, ext = os.path.splitext(imagem.filename)
 	if ext not in ('.png', '.jpg', '.jpeg'):
 		print("Tipo de arquivo nao permitido")
@@ -160,7 +162,7 @@ def delaltprod():
 @view('altprod')
 def atualizacaoProduto():
     listaCategorias = getCategoriasByFornecedor()
-    sql = "SELECT idp, nome, marca, categoria from produto where idp = '{}'".format(prod)
+    sql = "SELECT idp, nome, marca, categoria, imagem from produto where idp = '{}'".format(prod)
     c.execute(sql)
     tupla = c.fetchone()
     return dict(produto = tupla, categorias=listaCategorias)
@@ -168,14 +170,35 @@ def atualizacaoProduto():
 @post("/atualizacaoprod")
 @view('altprod')
 def atualizacaoProd():
-    nome = str(request.forms.get('nomeprod'))
-    marca = str(request.forms.get('marcaprod'))
-    categoria = str(request.forms.get('cateprod'))
-    sql = "UPDATE produto SET nome = '{}', marca = '{}', categoria = '{}' WHERE idp = '{}'".format(
-                nome, marca, categoria, prod)
-    c.execute(sql)
-    conn.commit()
-    redirect("/produtosFornecedor")
+	nome = str(request.forms.get('nomeprod'))
+	marca = str(request.forms.get('marcaprod'))
+	categoria = str(request.forms.get('cateprod'))
+	imagem = request.files.get('imagem')
+	if imagem == None:
+		sql = "UPDATE produto SET nome = '{}', marca = '{}', categoria = '{}' WHERE idp = '{}'".format(nome, marca, categoria, prod)
+		c.execute(sql)
+		conn.commit()
+	if imagem != None:
+		name, ext = os.path.splitext(imagem.filename)
+		if ext not in ('.png', '.jpg', '.jpeg'):
+			print("Tipo de arquivo nao permitido")
+			redirect("/produtosFornecedor")
+	
+		save_path = "static/img"
+		if not os.path.exists(save_path):
+			os.makedirs(save_path)
+	
+		file_path = "{path}/{file}".format(path=save_path, file = imagem.filename)
+	
+		if os.path.exists(file_path):
+			print("Arquivo ja existente")
+			redirect("/produtosFornecedor")
+		
+		imagem.save(file_path)
+		sql = "UPDATE produto SET nome = '{}', marca = '{}', categoria = '{}', imagem = '{}' WHERE idp = '{}'".format(nome, marca, categoria, imagem.filename, prod)
+		c.execute(sql)
+		conn.commit()
+	redirect("/produtosFornecedor")
 
 @get("/atualizacaoFornecedor")
 @view('atualizafor')
