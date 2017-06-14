@@ -39,12 +39,35 @@
         <div class='col s3'></div>
         <div class='col s4'>
           <a href="/restrito/clientes/listaProd" class='btn-large waves-effect waves-light blue'>
-            Lista de Produtos
+            Lista de produtos
           </a>
         </div>
         <div class='col s2'></div>
       </div>
       <hr/>
+      <div class='row'>
+        <div class='col s12' id='tabela-cli'>
+          <table class='striped'>
+            <thead>
+              <th>Nome</th>
+              <th>Marca</th>
+              <th>Categoria</th>
+              <th>Imagem</th>
+              <th>CNPJ</th>
+              <th>nome_fantasia</th>
+            </thead>
+            %for i in produtos:
+              <tr>
+                %for j in range(0, len(i)):
+                  <td>
+                    {{i[j]}}
+                  </td>
+                %end
+              </tr>
+            %end
+          </table>
+        </div>
+      </div>
     </div>
   </main>
 
