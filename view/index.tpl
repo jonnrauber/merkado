@@ -121,7 +121,10 @@
   </div>
   <div id="segundo-parallax" class="valign-wrapper parallax-container">
 	<div class="container center">
-      <p id="texto-segundo-parallax">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+      <p id="texto-segundo-parallax">
+        O mais rápido comparador de preços de supermercados.<br/>
+
+      </p>
 	</div>
   </div>
   <div id="terceiro-parallax" class="parallax-container">
@@ -129,8 +132,11 @@
     <div class="container center">
 	  <div class="row">
 	    <div class="card-about col s6 m6">
-	      <h2>About</h2>
-	      <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+	      <h2>Sobre</h2>
+	      <p>
+          MerKado é um app de uso simples para que clientes possam encontrar as melhores promoções em supermercados,
+          fornecedores possam divulgar os seus produtos e mercados aumentem suas vendas.
+        </p>
 	    </div>
       <div class="col s6 m6">
         <img id="img-mulher" src="static/img/home2.fw.png">
@@ -138,8 +144,6 @@
 	  </div>
     </div>
   </div>
-
-
 
   <footer class="page-footer">
      <div class="container">

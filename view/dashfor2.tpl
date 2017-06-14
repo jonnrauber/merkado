@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>MerKado - Painel do Fornecedor</title>
 
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="/static/js/w3.js"></script>
   <link rel="stylesheet prefetch" href="static/css/materialize.min.css"  media="screen,projection"/>
   <link type="text/css" href="static/css/styledash.css" rel="stylesheet">
 
