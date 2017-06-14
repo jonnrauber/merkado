@@ -304,7 +304,7 @@ def cliente_novo():
     clientes = c.fetchall()
     return dict(clientes=clientes)
 
-@get('/restrito/clientes/listaProd')
+@get('/restrito/produtos/lista')
 @view('restrito/produtos_cadastrados')
 def produto_cad():
     sql = "SELECT produto.nome, produto.marca, produto.categoria, produto.imagem, cliente.cnpj, cliente.nome_fantasia FROM produto join cliente on produto.fornecedor = cliente.cnpj"

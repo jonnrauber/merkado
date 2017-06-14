@@ -38,7 +38,7 @@
       <div class='row'>
         <div class='col s3'></div>
         <div class='col s4'>
-          <a href="/restrito/clientes/listaProd" class='btn-large waves-effect waves-light blue'>
+          <a href="/restrito/produtos/lista" class='btn-large waves-effect waves-light blue'>
             Lista de Produtos
           </a>
         </div>
