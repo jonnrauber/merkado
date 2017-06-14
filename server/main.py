@@ -1,6 +1,7 @@
 from bottle import route, run, template, static_file, view, post, get, redirect, request
 import shutil
 import os
+import re
 from connect import *
 import requests
 fornecedor = 'administrador1'
@@ -111,24 +112,22 @@ def cadastroproduto():
 	marca = str(request.forms.get('marcaprod'))
 	categoria = str(request.forms.get('cateprod'))
 	imagem = request.files.get('imagem')
-	print(imagem.filename)
-	print("auhshausuhauh")
 
 	name, ext = os.path.splitext(imagem.filename)
 	if ext not in ('.png', '.jpg', '.jpeg'):
 		print("Tipo de arquivo nao permitido")
 		redirect("/produtosFornecedor")
-	
+
 	save_path = "static/img"
 	if not os.path.exists(save_path):
 		os.makedirs(save_path)
-	
+
 	file_path = "{path}/{file}".format(path=save_path, file = imagem.filename)
-	
+
 	if os.path.exists(file_path):
 		print("Arquivo ja existente")
 		redirect("/produtosFornecedor")
-		
+
 	imagem.save(file_path)
 
 	sql = "INSERT INTO produto (nome,marca,categoria,imagem,fornecedor) \
@@ -258,13 +257,70 @@ def login():
 @get('/restrito')
 @view('restrito/controle')
 def restrito():
-    sql = "SELECT * FROM req_cadastro"
+    pass
+
+@get('/restrito/clientes')
+@view('restrito/clientes')
+def restrito_clientes():
+    pass
+
+@post('/restrito/clientes')
+def cadastro_clientes():
+    cnpj = str(request.forms.get('cnpj'))
+    cnpj = re.sub('[.-]', '', cnpj)
+    ie = str(request.forms.get('ie'))
+    ie = re.sub('[.]', '', ie)
+    razao_social = str(request.forms.get('razao_social'))
+    nome_fantasia = str(request.forms.get('nome_fantasia'))
+    rua = str(request.forms.get('rua'))
+    numero = str(request.forms.get('numero'))
+    bairro = str(request.forms.get('bairro'))
+    cidade = str(request.forms.get('cidade'))
+    uf = str(request.forms.get('uf'))
+    cep = str(request.forms.get('cep'))
+    cep = re.sub('[-]', '', cep)
+    complemento = str(request.forms.get('complemento'))
+    fone = str(request.forms.get('fone'))
+    fone = re.sub('[ -()]', '', fone)
+    email = str(request.forms.get('email'))
+    senha = str(request.forms.get('senha'))
+    tipo = str(request.forms.get('tipo'))
+
+    sql = "INSERT INTO cliente VALUES \
+            ('{}','{}','{}','{}','{}','{}','{}', \
+            '{}','{}','{}','{}','{}','{}','{}','{}')".format(
+                cnpj, ie, razao_social, nome_fantasia, rua, numero, bairro,
+                cidade, uf, cep, complemento, fone, email, senha, tipo)
+    print(sql)
     c.execute(sql)
-    requisicoes = c.fetchall()
+    conn.commit()
+    redirect('/restrito/clientes')
+
+@get('/restrito/clientes/lista')
+@view('restrito/clientes_cadastrados')
+def cliente_novo():
     sql = "SELECT cnpj, ie, razao_social, nome_fantasia, email, fone FROM cliente"
     c.execute(sql)
     clientes = c.fetchall()
-    return dict(requisicoes=requisicoes, clientes=clientes)
+    return dict(clientes=clientes)
+
+@get('/restrito/requisicoes_cadastro')
+@view('restrito/requisicoes')
+def requisicoes_cadastro():
+    sql = "SELECT * FROM req_cadastro"
+    c.execute(sql)
+    requisicoes = c.fetchall()
+    return dict(requisicoes=requisicoes)
+
+@get('/restrito/produtos')
+@view('restrito/produtos')
+def produtos_adicionados():
+    pass
+
+@get('/restrito/usuarios')
+@view('restrito/usuarios')
+def usuarios_app():
+    pass
 
 @get('/relatoriosFornecedor')
 @view('relatoriofor')

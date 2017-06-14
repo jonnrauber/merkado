@@ -28,21 +28,3 @@ $('.button-collapse').sideNav({
 	  draggable: true // Choose whether you can drag to open on touch screens
 	}
 );
-
-function displayReq() {
-  if ($('#tabela-req').css('display') == 'none') {
-    $('#tabela-req').show();
-    $('#tabela-cli').hide();
-  } else {
-    $('#tabela-req').hide();
-  }
-};
-
-function displayCli() {
-  if ($('#tabela-cli').css('display') == 'none') {
-    $('#tabela-cli').show();
-    $('#tabela-req').hide();
-  } else {
-    $('#tabela-cli').hide();
-  }
-};

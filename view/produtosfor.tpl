@@ -82,11 +82,11 @@
     <div w3-include-html="static/modalAtendimento.html"></div>
   </div>
 
-  <div id="modalcadprod" class="modal">
+  <div id="modalcadprod" class="modal modal-fixed-footer>
 		<div class="modal-content">
-			<h4>Cadastro de produtos</h4>
 			<form action='cadastroproduto' method='post' enctype="multipart/form-data">
 				<div class="container">
+					<h5>Cadastro de produtos</h5>
 					<div class="row">
 						<div class="input-field col s12">
 							<input class="validate" type="text" name="nomeprod" id="nomeprod" required/>
@@ -122,13 +122,13 @@
 							</div>
 					</div>
 				</div>
-		</div>
+
 		<div class = "container">
 			<div class="modal-footer">
 				<button type="submit" class="modal-action modal-close right btn waves-effect waves-light">Salvar</button>
 			</div>
 		</div>
-
+		</div>
 		</form>
 	</div>
   <!--Import jQuery before materialize.js-->

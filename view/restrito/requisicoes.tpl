@@ -8,10 +8,19 @@
   <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <link type="text/css" href="/static/css/restrito.css" rel="stylesheet">
 </head>
 
 <body>
+  <div id="menu-restrito">
+    <ul id="slide-out" class="side-nav fixed">
+        <li><a href="/restrito">Visão Geral</a></li>
+        <li><a href="/restrito/requisicoes_cadastro">Requisições de cadastro</a></li>
+        <li><a href="/restrito/clientes">Gerenciar Clientes</a></li>
+        <li><a href="/restrito/produtos">Produtos adicionados</a></li>
+        <li><a href="/restrito/usuarios">Usuários do app</a></li>
+      </ul>
+  </div>
 
   <header>
     <nav class='black white-text'>
@@ -27,33 +36,27 @@
   <main>
     <div class='container'>
       <div class='row'>
-        <div class='col s3'>
-          <a href='/restrito/requisicoes_cadastro'>
-            <div class="card-panel indigo lighten-4 center">
-                <p class='white-text'>Requisições</p>
-            </div>
-          </a>
-        </div>
-        <div class='col s3'>
-          <a href='/restrito/clientes'>
-            <div class="card-panel indigo lighten-1 center">
-                <p class='white-text'>Clientes</p>
-            </div>
-          </a>
-        </div>
-        <div class='col s3'>
-          <a href='/restrito/produtos'>
-            <div class="card-panel indigo darken-1 center">
-                <p class='white-text'>Produtos</p>
-            </div>
-          </a>
-        </div>
-        <div class='col s3'>
-          <a href='/restrito/usuarios'>
-            <div class="card-panel indigo darken-4 center">
-                <p class='white-text'>Usuários do App</p>
-            </div>
-          </a>
+        <h5>Requisições de cadastro</h5>
+      </div>
+      <div class='row'>
+        <div class='col s12' id='tabela-req'>
+          <table class='striped'>
+            <thead>
+              <th>Razão Social</th>
+              <th>CNPJ</th>
+              <th>Telefone</th>
+              <th>E-mail</th>
+              <th>Tipo</th>
+              <th>Mensagem</th>
+            </thead>
+            %for i in requisicoes:
+              <tr>
+                %for j in range(1, len(i)):
+                  <td>{{i[j]}}</td>
+                %end
+              </tr>
+            %end
+          </table>
         </div>
       </div>
     </div>
@@ -67,6 +70,6 @@
   <script type="text/javascript" src="/static/js/jquery.mask.js"></script>
   <script type="text/javascript" src="/static/js/materialize.min.js"></script>
   <script type="text/javascript" src="/static/js/restrito.js"></script>
-</body>
+  </body>
 
 </html>
