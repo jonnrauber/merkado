@@ -61,3 +61,15 @@
       </div>
     </div>
   </main>
+
+  <footer>
+  </footer>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="/static/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.mask.js"></script>
+  <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/static/js/restrito.js"></script>
+  </body>
+
+</html>
